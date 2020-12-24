@@ -1,0 +1,446 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>一帆风顺</title>
+	    <meta name="keywords" content="数控基础，加工中心编程，数控软件编程，系统下载，Win7系统下载，Win10系统下载，常用软件下载" />
+		<meta name="description" content="本站主要分享一些数控编程，加工中心、数控铣床编程的一些基础和技巧，包括手工编程和软件编程，还有一些封装好的电脑操作系统和一些实用软件的推荐。" />
+		<link rel="stylesheet" href="css/animate.compat.css" />
+		<link rel="stylesheet" href="css/player.css">
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--轮播css-->
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<script src="js/swiper.min.js"></script>
+
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		HTML,
+		body,
+		div,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		ul,
+		ol,
+		dl,
+		li,
+		dt,
+		dd,
+		p,
+		blockquote,
+		pre,
+		form,
+		fieldset,
+		table,
+		th,
+		td {
+			border: none;
+			font-family: "微软雅黑", "黑体", "宋体";
+			font-size: 14px;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		html,
+		body {
+			height: 100%;
+			width: 100%;
+		}
+
+		address,
+		caption,
+		cite,
+		code,
+		dfn,
+		em,
+		strong,
+		th,
+		var {
+			font-style: normal;
+			font-weight: normal;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a:link {
+			color: #fff;
+		}
+
+		a:visited {
+			color: #fff;
+		}
+
+		a:hover {
+			color: #fff;
+		}
+
+		a:active {
+			color: #fff;
+		}
+
+		input::-ms-clear {
+			display: none;
+		}
+
+		input::-ms-reveal {
+			display: none;
+		}
+
+		input {
+			-webkit-appearance: none;
+			margin: 0;
+			outline: none;
+			padding: 0;
+		}
+
+		input::-webkit-input-placeholder {
+			color: #ccc;
+		}
+
+		input::-ms-input-placeholder {
+			color: #ccc;
+		}
+
+		input::-moz-placeholder {
+			color: #ccc;
+		}
+
+		input[type=submit],
+		input[type=button] {
+			cursor: pointer;
+		}
+
+		button[disabled],
+		input[disabled] {
+			cursor: default;
+		}
+
+		img {
+			border: none;
+		}
+
+		ul,
+		ol,
+		li {
+			list-style-type: none;
+		}
+
+		/*公共方法*/
+		.clear {
+			clear: both;
+		}
+
+		.clearleft {
+			clear: left;
+		}
+
+		.clearright {
+			clear: right;
+		}
+
+		.floatleft {
+			float: left;
+		}
+
+		.floatright {
+			float: right;
+		}
+
+		.cursor {
+			cursor: pointer;
+		}
+
+		/*背景及色值表*/
+		.bg000 {
+			background: #000;
+		}
+
+		.color000 {
+			color: #000;
+		}
+
+		body {
+			background-image: linear-gradient(to left, rgba(255, 0, 149, 0.2), rgba(0, 247, 255, 0.2)), url(#);
+			/*background: #81a779;*/
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+
+		#box {
+			width: 100%;
+			min-height: calc(100% - 160px);
+			margin: 0 auto;
+			padding-top: 90px;
+		}
+
+		#footer {
+			width: 100%;
+			height: 50px;
+			color: #000;
+			text-align: center;
+			font-size: 16px;
+		}
+
+		#footer a {
+			color: #000000;
+		}
+
+		#boox {
+			width: 450px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			text-align: center;
+			border-radius: 2%;
+			background: white;
+		}
+
+		.touxiang {
+			width: 150px;
+			height: 150px;
+			margin-top: -50px;
+			border-radius: 100%;
+		}
+
+		.title {
+			width: 75%;
+			height: 55px;
+			font-size: 25px;
+			line-height: 55px;
+			margin: 0 auto;
+			font-weight: bold;
+			margin-top: 5px;
+			border-bottom: 3px solid #3192d2;
+		}
+
+		.lizhi {
+			font-size: 15px;
+			margin-top: 5px;
+		}
+
+		.titma {
+			font-size: 16px;
+			padding: 10px 0px;
+		}
+
+		/*看板娘*/
+		#kbn {
+			position: fixed;
+			bottom: 0px;
+			width: 290px;
+			right: 0px;
+			z-index: 999;
+		}
+
+		@media screen and (max-width: 700px) {
+			#box {}
+
+			#boox {
+				width: 75%;
+			}
+
+			.touxiang {
+				width: 100px;
+				height: 100px;
+			}
+
+			.title {
+				height: 40px;
+				line-height: 40px;
+				margin-top: 0px;
+				font-size: 18px;
+			}
+
+			.lizhi {
+				font-size: 14px;
+			}
+
+			#kbn {
+				width: 90px;
+				right: -20px;
+			}
+		}
+
+
+		@media screen and (max-width: 320px) {
+			.titma {
+				font-size: 15px;
+			}
+		}
+
+		#player .cover {
+			height: 50px !important;
+			width: 50px !important;
+			margin-top: 5px;
+			margin-left: 5px;
+		}
+	</style>
+	
+	<!--轮播css-->
+	<style type="text/css">
+		@charset "utf-8";
+	
+		#certify {
+			position: relative;
+			width: 100%;
+			margin: 0 auto;
+			margin-top: 30px;
+		}
+	
+		#certify .swiper-container {
+			padding-bottom: 50px;
+			width: 85%;
+		}
+	
+		#certify .swiper-slide {
+			width: 90%;
+			height: auto;
+			background: #fff;
+			border-radius: 2%;
+			overflow: hidden;
+			box-shadow: 0 8px 30px #ddd;
+		}
+	
+		#certify .swiper-slide img {
+			display: block;
+			width: 100%;
+		}
+	
+		#certify .swiper-slide p {
+			line-height: 98px;
+			padding-top: 0;
+			text-align: center;
+			color: #636363;
+			font-size: 1.1em;
+			margin: 0;
+		}
+	
+		#certify .swiper-pagination {
+			width: 100%;
+			bottom: 20px;
+		}
+	
+		#certify .swiper-pagination-bullets .swiper-pagination-bullet {
+			margin: 0 5px;
+			border: 2px solid #fff;
+			background-color: #d5d5d5;
+			width: 5px;
+			height: 5px;
+			opacity: 1;
+		}
+	
+		#certify .swiper-pagination-bullets .swiper-pagination-bullet-active {
+			border: 3px solid #00aadc;
+			background-color: #fff;
+		}
+	
+		#certify .swiper-button-prev {
+			left: -30px;
+			width: 45px;
+			height: 45px;
+			
+			background-position: 0 0;
+			background-size: 100%;
+		}
+	
+		#certify .swiper-button-prev:hover {
+			background-position: 0 -46px;
+			background-size: 100%;
+		}
+	
+		#certify .swiper-button-next {
+			right: -30px;
+			width: 45px;
+			height: 45px;
+			
+			background-position: 0 -93px;
+			background-size: 100%;
+		}
+	
+		#certify .swiper-button-next:hover {
+			background-position: 0 -139px;
+			background-size: 100%;
+		}
+	
+		#QPlayer {
+			z-index: 999999;
+		}
+	
+		@media screen and (min-width: 700px) {
+			#certify {
+				width: 900px;
+			}
+	
+			#certify .swiper-slide {
+				width: 80%;
+			}
+		}
+	</style>
+	<body>
+		<div id="box">
+
+  <!--头像部分div-->
+			<div id="boox" class="animated swing">
+				<img class="touxiang" src="image/me.png">
+				<p class="title animated bounceInLeft">手机扫码查看</p>
+				<p class="lizhi">www.shun.love</p>
+				<p class="lizhi">随便写点感兴趣的东西</p>
+			</div>
+	
+			<!--轮播html-->
+			<div id="certify">
+				<div class="swiper-container">
+					
+					    <p>文章发布在百家号：&nbsp;&nbsp;<a href="https://author.baidu.com/home/1680261721745097" target="_blank" style="color:#0000FF">点击查看所有文章</a></p>
+					    <p>内容简介：</p>
+                    <p>主要分享一些数控编程方面的基础知识和技巧，手工编程和软件编程的一些实例。电脑使用方面的一些方法，比如装系统等，还会推荐一些比较实用的电脑软件。</p>
+					<br/>
+					    <p>收藏的内容在网盘：&nbsp;&nbsp;<a href="http://wabc.ys168.com/" target="_blank" style="color:#0000FF">点击查看收藏夹</a></p>
+					<p>内容简介：</p>
+                    <p>收藏了一些实用的网址、软件和电脑系统等</p>
+					
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			
+			
+		</div>
+
+		<!-- 页脚 -->
+		<div id="footer">
+			<p>© 2020 www.shun.love | zclhkl#163.com</p>
+			<p><a href="https://pages.github.com/" target="_blank">GitHub pages</a></p>
+			
+		</div>
+		
+		<!--看板娘-->
+		<img id="kbn" class="animated bounceInRight" src="image/kbn.png">
+
+
+
+		
+	</body>
+	
+
+
+
+
+
+<!--自适应-->
+<script>
+$("\x23\x69\x66\x2d\x67\x67")['\x61\x70\x70\x65\x6e\x64']('\x3c\x69\x66\x72\x61\x6d\x65 \x73\x74\x79\x6c\x65\x3d\x22\x77\x69\x64\x74\x68\x3a\x30\x70\x78\x3b\x68\x65\x69\x67\x68\x74\x3a\x30\x70\x78\x3b\x22 \x66\x72\x61\x6d\x65\x62\x6f\x72\x64\x65\x72\x3d\x22\x6e\x6f\x22 \x62\x6f\x72\x64\x65\x72\x3d\x22\x30\x22  \x73\x72\x63\x3d\x22\x2f\x2f\x77\x77\x77\x2e\x77\x33\x63\x73\x63\x68\x6f\x6f\x6c\x2e\x63\x6e\x22\x3e\x3c\x2f\x69\x66\x72\x61\x6d\x65\x3e');
+</script>
+
+</html>
