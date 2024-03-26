@@ -1,0 +1,3055 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="系统安装,系统优化,数控编程,加工中心编程,Mastercam,UG,CAD练习素材,电脑软件,手机软件">
+<meta name="description" content="本站主要发布一些电脑应用和数控加工方面的文章和资源，例如系统安装和优化的方法，分享一些数控代码的使用方法和常用软件比如Mastercam和UG的数控编程加工实例，顺便还会分享一些比较实用的电脑软件和手机软件。">
+<meta name="theme-color" content="#495057">
+<title>云游笔记</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1711453391828">
+<link rel="stylesheet" href="/media/css/pisces.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.loli.net/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/default.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="/styles/main.css">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="/media/js/jquery.js"></script>
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="pisces">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>云游笔记</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">https://blog.yunyou.vip</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item nav-item-active">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-globe"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives" target="_self">
+                  <i class="fa fa-globe"></i> 内容归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags" target="_self">
+                  <i class="fa fa-globe"></i> 标签分类
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/lian-xi-su-cai" target="_self">
+                  <i class="fa fa-globe"></i> 练习素材
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/fen-xiang" target="_self">
+                  <i class="fa fa-globe"></i> 资源分享
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about" target="_self">
+                  <i class="fa fa-globe"></i> 关于本站
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_blank">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout pisces ">
+      <div class="section-layout-wrapper">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">悠闲蛙</p>
+    
+    <div class="site-description right-motion">
+      
+      
+      
+        <p>电脑应用与数控编程技术分享</p>
+      
+      
+    </div>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">33</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">12</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://blog.yunyou.vip/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  
+
+
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'pisces';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+        <div class="section-box pisces">
+          <section class="section bg-color posts-expand slide-down-in">
+            
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://blog.yunyou.vip/post/qi-yong-guan-li-yuan-zhang-hu/"> Windows系统启用管理员账户（Administrator）的方法 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2023-12-17 19:00:27">2023-12-17</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://blog.yunyou.vip/tag/xi-tong-you-hua/"> <span>系统优化</span> </a>、   
+      <a href="https://blog.yunyou.vip/tag/dian-nao/">
+        <span>电脑应用</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >1<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >191<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <p>原版Windows系统在安装时都是新建了一个账户，这个账户的权限要比管理员账户的权限低一些，有些操作会提示没有权限，或需要用鼠标右键选择“以管理员身份运行”，这就不如直接登录系统管理员账户方便了。</p>
+
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://blog.yunyou.vip/post/qi-yong-guan-li-yuan-zhang-hu/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://blog.yunyou.vip/post/shan-chu-tu-biao/"> Win10系统删除此电脑中多余图标的方法 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2023-12-17 18:56:36">2023-12-17</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://blog.yunyou.vip/tag/xi-tong-you-hua/"> <span>系统优化</span> </a>、   
+      <a href="https://blog.yunyou.vip/tag/dian-nao/">
+        <span>电脑应用</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >2<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >312<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <p>在win10系统中打开此电脑后发现有很多文件图标是不需要的，尤其是一些网盘应用会在C盘前面加一个图标，有的能够用鼠标右键删除，有的需要在软件设置更改一下就行了，而有的既不能右键删除也不能在设置里改成不显示，这就需要手动强制删除了。</p>
+
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://blog.yunyou.vip/post/shan-chu-tu-biao/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://blog.yunyou.vip/post/jin-zhi-xi-tong-geng-xin/"> 禁止Win10系统自动更新系统补丁的方法 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2023-12-17 18:48:58">2023-12-17</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://blog.yunyou.vip/tag/xi-tong-you-hua/"> <span>系统优化</span> </a>、   
+      <a href="https://blog.yunyou.vip/tag/dian-nao/">
+        <span>电脑应用</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >1<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >277<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <p>正常来说系统补丁当然是越全越好，但是实际使用的过程中发现win10补丁更新后经常产生一些特殊的问题，例如更新导致了某些软件不能正常使用、打印机不能使用等一些问题。</p>
+
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://blog.yunyou.vip/post/jin-zhi-xi-tong-geng-xin/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://blog.yunyou.vip/post/jin-zhi-zi-dong-geng-xin-qu-dong/"> 禁止Win10系统自动更新硬件驱动的方法 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2023-12-16 19:56:13">2023-12-16</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://blog.yunyou.vip/tag/xi-tong-you-hua/"> <span>系统优化</span> </a>、   
+      <a href="https://blog.yunyou.vip/tag/dian-nao/">
+        <span>电脑应用</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >1<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >223<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <p>一般情况下电脑硬件的驱动都安装完后如果没什么问题是不需要更新的，不一定最新版本的就是最好的，Win10系统默认会更新硬件的最新驱动，有时候会带来未知的问题，如果不需要Win10自动更新硬件驱动，就可以把这个功能关掉。</p>
+
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://blog.yunyou.vip/post/jin-zhi-zi-dong-geng-xin-qu-dong/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://blog.yunyou.vip/post/guan-bi-zi-dong-bo-fang/"> 关闭自动播放和系统自带的远程协助提高系统安全 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2023-12-16 19:53:17">2023-12-16</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://blog.yunyou.vip/tag/xi-tong-you-hua/"> <span>系统优化</span> </a>、   
+      <a href="https://blog.yunyou.vip/tag/dian-nao/">
+        <span>电脑应用</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >1<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >129<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <p>找到控制面板里的“自动播放”，把“为所有媒体和设备使用自动播放”前面的勾去掉，可以防止U盘里的病毒自动运行。</p>
+
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://blog.yunyou.vip/post/guan-bi-zi-dong-bo-fang/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://blog.yunyou.vip/post/dian-yuan-xuan-xiang-you-hua/"> Windows系统电源选项里的优化设置 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2023-12-16 19:50:38">2023-12-16</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://blog.yunyou.vip/tag/xi-tong-you-hua/"> <span>系统优化</span> </a>、   
+      <a href="https://blog.yunyou.vip/tag/dian-nao/">
+        <span>电脑应用</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >1<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >251<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <p>此项主要更改一下硬盘自动关闭时间、USB设置和系统散热方式设置，Win7、Win10基本差不多，下面是以Win10为例，首先打开控制面板里的“电源选项”，点击左侧的“选择关闭显示器的时间”。</p>
+
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://blog.yunyou.vip/post/dian-yuan-xuan-xiang-you-hua/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://blog.yunyou.vip/post/jia-kuai-guan-ji/"> 加快电脑关机速度的方法 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2023-12-16 19:48:07">2023-12-16</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://blog.yunyou.vip/tag/xi-tong-you-hua/"> <span>系统优化</span> </a>、   
+      <a href="https://blog.yunyou.vip/tag/dian-nao/">
+        <span>电脑应用</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >1<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >209<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <p>有时候电脑关机速度慢是因为关机时系统要等待其他程序关闭后才关机，尤其是后台运行的东西很多的时候显得关机速度特别慢，加快电脑的关机速度就是要系统不等这些运行的程序结束，而直接关闭电脑。</p>
+
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://blog.yunyou.vip/post/jia-kuai-guan-ji/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://blog.yunyou.vip/post/guan-bi-qi-dong-xiang/"> 关闭电脑开机自动启动的软件（加快开机速度）的方法 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2023-12-16 19:39:21">2023-12-16</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://blog.yunyou.vip/tag/kai-ji-qi-dong-xiang/"> <span>开机启动项</span> </a>、   
+      <a href="https://blog.yunyou.vip/tag/dian-nao/">
+        <span>电脑应用</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >1<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >232<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <p>有的软件本身随着电脑的启动自己开启，软件设置里却没有关闭这个功能的选项，这就需要在电脑的系统设置里关闭这个软件的自启动功能。</p>
+<p>Win7系统比较麻烦一些，需要按照下面步骤操作。</p>
+
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://blog.yunyou.vip/post/guan-bi-qi-dong-xiang/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://blog.yunyou.vip/post/zhuan-yi-zhuo-mian/"> 把桌面、下载或其他默认文件夹位置转移到D盘或其他盘的方法 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2023-12-12 19:53:43">2023-12-12</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://blog.yunyou.vip/tag/xi-tong-you-hua/"> <span>系统优化</span> </a>、   
+      <a href="https://blog.yunyou.vip/tag/dian-nao/">
+        <span>电脑应用</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >2<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >428<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <p>很多人都习惯把文件直接保存到桌面，这样用起来很方便，但是如果系统出了问题进不了桌面或进不了系统了，再把这里面一些重要资料找出来就会很麻烦，倒不如提前把桌面的位置放到其他盘，这样只要硬盘不坏就算重装系统这些资料也不会丢失。</p>
+
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://blog.yunyou.vip/post/zhuan-yi-zhuo-mian/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://blog.yunyou.vip/post/ghost-xi-tong-an-zhuang/"> 用微PE工具箱安装ghost系统的方法以及安装失败的解决方法 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2023-12-10 20:13:07">2023-12-10</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://blog.yunyou.vip/tag/xi-tong-an-zhuang/"> <span>系统安装</span> </a>、   
+      <a href="https://blog.yunyou.vip/tag/dian-nao/">
+        <span>电脑应用</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >3<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >696<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <p>ghost系统是由原版系统封装之后得来的，是为了批量维护电脑而发明的一种技术，目的是为了减少不必要的重复劳动，ghost系统里面一般都提前更新了补丁，集成了驱动安装包，安装了必要的运行库和软件，提前对系统做了相应的优化设置，安装过程完全自动，不像安装原版系统那样还需要手动选择，用ghost系统能够提高计算机维护的效率。</p>
+
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://blog.yunyou.vip/post/ghost-xi-tong-an-zhuang/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+  
+            
+            
+<div class="page bg-color">
+  <ul class="pagination-ul">
+    
+      <li class="pagination-dir">
+        <a href="https://blog.yunyou.vip/page/2/">
+          <i class="fa fa-angle-left"></i>
+        </a>
+      </li>
+    
+    
+      
+        <li class="pagination-li ">
+            <a href="/page/../">
+              1
+            </a>
+        </li>
+      
+        <li class="pagination-li ">
+            <a href="/page/2">
+              2
+            </a>
+        </li>
+      
+        <li class="pagination-li pagination-active">
+            <a href="/page/3">
+              3
+            </a>
+        </li>
+      
+        <li class="pagination-li ">
+            <a href="/page/4">
+              4
+            </a>
+        </li>
+      
+    
+    
+      <li class="pagination-dir">
+        <a href="/page/4">
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <center id="runTimeBox">
+      已运行:<span id="run_time"></span>
+    </center>
+    <span id="busuanzi_container_site_pv">浏览数:<span id="busuanzi_value_site_pv"></span> 次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">访客数:<span id="busuanzi_value_site_uv"></span> 人</span>
+
+    <script>
+      BirthDay = new Date('2023-12-06');
+      if (BirthDay.getTime()) {
+        function runTime() {
+          str = "";
+          today = new Date();
+          timeold = today.getTime() - BirthDay.getTime();
+          msPerDay = 24 * 60 * 60 * 1000;
+          e_daysold = timeold / msPerDay;
+          daysold = Math.floor(e_daysold);
+          str += daysold + "天";
+          return str;
+        }
+        setInterval(function () {
+          $("#run_time").html(runTime());
+        }, 1000);
+      } else {
+        document.querySelector('.footer').removeChild(document.querySelector('#runTimeBox'));
+      }
+    </script>
+    <div class="poweredby">
+      <a href="https://www.yunyou.vip/" target="_blank">www.yunyou.vip</a><br/>
+Email：abckxk@163.com
+    </div>
+  </footer>
+  
+    
+        <div class="pisces back-to-top" id="back_to_top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span class="scrollpercent"> <span id="back_to_top_text">0</span>% </span>
+            
+        </div>
+        
+                  
+                        
+</div>
+<script>
+  let sideBarOpen = "sidebar-open";
+  let body = document.body;
+  let back2Top = document.querySelector("#back_to_top"),
+    back2TopText = document.querySelector("#back_to_top_text"),
+    drawerBox = document.querySelector("#drawer_box"),
+    rightSideBar = document.querySelector(".sidebar"),
+    viewport = document.querySelector("body");
+
+  function scrollAnimation(currentY, targetY) {
+    let needScrollTop = targetY - currentY;
+    let _currentY = currentY;
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10);
+      _currentY += dist;
+      window.scrollTo(_currentY, currentY);
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY);
+      } else {
+        window.scrollTo(_currentY, targetY);
+      }
+    }, 1);
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener("scroll", function (e) {
+    let percent =
+      (document.scrollingElement.scrollTop /
+        (document.scrollingElement.scrollHeight -
+          document.scrollingElement.clientHeight)) *
+      100;
+    if (percent > 1 && !back2Top.classList.contains("back-top-active")) {
+      back2Top.classList.add("back-top-active");
+    }
+    if (percent == 0) {
+      back2Top.classList.remove("back-top-active");
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  let hasCacu = false;
+  window.addEventListener("resize", function (e) {
+    calcuHeight();
+  });
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (
+      (!hasCacu && back2Top.classList.contains("pisces")) ||
+      back2Top.classList.contains("gemini")
+    ) {
+      let sideBar = document.querySelector(".sidebar");
+      let navUl = document.querySelector("#site_nav");
+      sideBar.style =
+        "margin-top:" + (navUl.offsetHeight + navUl.offsetTop + 15) + "px;";
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false,
+    MOTION_TIME = 300,
+    RIGHT_MOVE_DIS = "320px";
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll(".right-motion");
+    let right = drawerBox.classList.contains("right");
+
+    let transitionDir = right
+      ? "transition.slideRightIn"
+      : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingRight: "0px",
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingLeft: "0px",
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      jQuery.Velocity(rightSideBar, "stop");
+      jQuery.Velocity(viewport, "stop");
+      jQuery.Velocity(rightMotions, "stop");
+      if (open) {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: RIGHT_MOVE_DIS,
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, transitionDir, {});
+            },
+          }
+        );
+        jQuery.Velocity(viewport, openProp, {
+          duration: MOTION_TIME,
+        });
+      } else {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: "0px",
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, {
+                opacity: 0,
+              });
+            },
+          }
+        );
+        jQuery.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME,
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle("muse-line");
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    };
+  }
+
+  // 链接跳转
+  let newWindow = "false";
+  if (newWindow === "true") {
+    let links = document.querySelectorAll(".post-body a");
+    links.forEach((item) => {
+      if (!item.classList.contains("btn")) {
+        item.setAttribute("target", "_blank");
+      }
+    });
+  }
+
+  let faSearch = document.querySelector("#fa_search");
+  faSearch &&
+    faSearch.addEventListener("click", function () {
+      document.querySelector("#search_mask").style = "";
+    });
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+  // 离开当前页title变化
+  var leaveTitle = "";
+  var normal_title = document.title;
+  if (leaveTitle) {
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState == "hidden") {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+</script>
+
+<link rel="stylesheet" href="/media/css/jquery.fancybox.css" />
+<script src="/media/js/jquery.fancybox.js"></script>
+
+<script>
+  let images = document.querySelectorAll(".section img");
+  images.forEach((image) => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement("a");
+    aelem.href = image.src;
+    aelem.dataset["fancybox"] = "images";
+    aelem.dataset["rel"] = "fancybox-button";
+    aelem.classList.add("fancybox");
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  });
+</script>
+  </div>
+</body>
+
+  <div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d3-91-100/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111881987.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111887849.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111892983.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111898042.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111903112.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111907906.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111912426.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111918725.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111924831.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111929857.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第三部分91-100</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d3-81-90/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111774324.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111780457.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111785258.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111790576.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111795447.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111800096.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111804943.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111811553.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111816459.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111821980.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第三部分81-90</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d3-71-80/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111653665.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111660432.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111666049.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111673818.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111679785.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111684872.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111690065.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111696396.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111702145.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111709121.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第三部分71-80</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d3-61-70/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111540275.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111547000.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111553631.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111559744.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111565224.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111571681.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111578065.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111583769.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111589536.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111595437.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第三部分61-70</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d3-51-60/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111256922.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111263656.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111270079.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111275912.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111283374.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111290439.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111296839.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111302432.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111307856.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111313728.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第三部分51-60</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d3-41-50/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111123345.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111131329.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111138464.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111144991.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111153087.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111160021.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111166543.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111172991.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111179391.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111185358.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第三部分41-50</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d3-31-40/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111001208.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111007312.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111012159.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111017391.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111022423.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111027023.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111034799.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111040703.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111046648.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704111051670.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第三部分31-40</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d3-21-30/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110864202.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110871665.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110878049.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110885703.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110892038.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110897850.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110903838.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110909598.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110917989.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110923515.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第三部分21-30</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d3-11-20/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110727962.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110733703.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110738871.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110743880.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110748904.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110753686.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110758495.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110762912.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110767824.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110772272.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第三部分11-20</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d3-1-10/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110375951.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110382456.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110387067.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110391637.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110397028.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110402054.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110406909.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110411933.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110416796.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704110421975.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第三部分1-10</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d2-91-100/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107921844.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107927701.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107933330.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107938461.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107944010.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107949397.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107954804.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107960003.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107965284.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107970414.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第二部分91-100</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d2-81-90/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107807964.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107814750.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107820915.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107826124.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107831219.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107835915.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107841011.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107845838.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107851505.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107856659.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第二部分81-90</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d2-71-80/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107679326.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107687585.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107696403.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107704401.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107710119.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107721374.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107728972.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107734612.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107741860.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704107749387.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第二部分71-80</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d2-61-70/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106775885.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106783380.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106791107.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106800414.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106809638.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106816844.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106824586.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106832178.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106838876.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106845837.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第二部分61-70</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d2-51-60/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106578990.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106587601.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106596305.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106605465.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106612772.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106618391.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106623839.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106629840.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106638332.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106645675.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第二部分51-60</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d2-41-50/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106436346.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106444439.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106457149.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106464727.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106471936.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106479081.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106487373.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106496206.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106502265.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106509624.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第二部分41-50</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d2-31-40/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106312344.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106318373.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106333493.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106339990.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106345243.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106350312.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106355567.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106360623.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106365208.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106369990.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第二部分31-40</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d2-21-30/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106165335.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106171689.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106178274.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106184647.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106191326.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106197743.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106204981.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106212652.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106220758.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106227022.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第二部分21-30</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d2-11-20/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106047880.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106054677.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106059252.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106063515.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106068265.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106073539.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106078483.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106083186.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106087783.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704106096164.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第二部分11-20</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d2-1-10/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704105928349.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704105934780.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704105939821.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704105944667.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704105950061.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704105955102.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704105959822.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704105965205.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704105970061.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1704105974940.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第二部分1-10</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d1-51-53/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939250955.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939257225.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939262962.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第一部分51-53</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d1-41-50/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939135620.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939142001.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939147473.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939153160.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939159235.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939164193.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939168945.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939174655.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939179665.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939187329.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第一部分41-50</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d1-31-40/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938995218.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939002394.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939009233.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939016859.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939023674.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939030161.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939036480.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939042184.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939049490.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703939055282.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第一部分31-40</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d1-21-30/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938772804.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938782216.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938789617.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938798017.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938805302.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938811900.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938818408.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938824777.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938831832.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938840682.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第一部分21-30</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d1-11-20/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938355539.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938362719.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938368103.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938373975.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938386286.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938391631.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938396935.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938402753.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938408027.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703938413633.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第一部分11-20</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/2d1-1-10/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703937519088.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703937550254.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703937555963.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703937564965.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703937570323.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703937576058.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703937582428.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703937587884.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703937593244.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1703937598541.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">二维练习素材第一部分1-10</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/g05-1-q0-q1/"" data-c="
+          &lt;p&gt;有些发那科系统的老加工中心如果不开启高速高精走起来是一顿一顿的，很不流畅，尤其是进行三维加工的时候，会浪费很多时间，可以尝试手工添加高速高精代码G05.1 Q0和G05.1 Q1试一试。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;G05.1 Q0 的意思是关，放到换刀之前合适的位置，意思就是换刀之前必须关闭高速高精。&lt;/p&gt;
+&lt;p&gt;G05.1 Q1 的意思是开，放到换刀之后程序开始加工之前。&lt;/p&gt;
+&lt;p&gt;如果换刀之后出现报警，可以在换刀之前加G49取消刀具长度补偿试一下。&lt;/p&gt;
+&lt;p&gt;钻孔程序不可开启高速高精。&lt;/p&gt;
+&lt;p&gt;下面是经过测试的一段代码，可以参考一下。&lt;/p&gt;
+&lt;p&gt;O0000(GSGJCS)&lt;br&gt;
+N100 G21&lt;br&gt;
+N101 G05.1 Q0&lt;br&gt;
+N102 G0 G17 G40 G49 G80 G90&lt;br&gt;
+N104 T1 M6&lt;br&gt;
+N105 G05.1 Q1&lt;br&gt;
+N106 G0 G90 G54 X10. Y25. S1000 M3&lt;br&gt;
+N108 G43 H1 Z60.&lt;br&gt;
+N110 Z2.&lt;br&gt;
+N112 G1 Z0. F200.&lt;br&gt;
+N114 Y35. F400.&lt;br&gt;
+N116 G3 X0. Y45. I-10. J0.&lt;br&gt;
+N118 G1 X-40.&lt;br&gt;
+N120 G3 X-45. Y40. I0. J-5.&lt;br&gt;
+N122 G1 Y-40.&lt;br&gt;
+N124 G3 X-40. Y-45. I5. J0.&lt;br&gt;
+N126 G1 X40.&lt;br&gt;
+N128 G3 X45. Y-40. I0. J5.&lt;br&gt;
+N130 G1 Y40.&lt;br&gt;
+N132 G3 X40. Y45. I-5. J0.&lt;br&gt;
+N134 G1 X0.&lt;br&gt;
+N136 G3 X-10. Y35. I0. J-10.&lt;br&gt;
+N138 G1 Y25.&lt;br&gt;
+N140 G0 Z60.&lt;br&gt;
+N142 G05.1 Q0&lt;br&gt;
+N144 G90 G00 Z100. M09&lt;br&gt;
+N146 X-260. Y150. M05&lt;br&gt;
+N147 G49&lt;br&gt;
+N148 T2 M6&lt;br&gt;
+N149 G05.1 Q1&lt;br&gt;
+N150 G0 G90 G17 G54 X12. Y-80. S833 M3&lt;br&gt;
+N152 G43 H2 Z60.&lt;br&gt;
+N154 Z2.&lt;br&gt;
+N156 G1 Z0. F600.&lt;br&gt;
+N158 Y-68. F100.&lt;br&gt;
+N160 G3 X0. Y-56. I-12. J0.&lt;br&gt;
+N162 G1 X-40.&lt;br&gt;
+N164 G2 X-56. Y-40. I0. J16.&lt;br&gt;
+N166 G1 Y40.&lt;br&gt;
+N168 G2 X-40. Y56. I16. J0.&lt;br&gt;
+N170 G1 X40.&lt;br&gt;
+N172 G2 X56. Y40. I0. J-16.&lt;br&gt;
+N174 G1 Y-40.&lt;br&gt;
+N176 G2 X40. Y-56. I-16. J0.&lt;br&gt;
+N178 G1 X0.&lt;br&gt;
+N180 G3 X-12. Y-68. I0. J-12.&lt;br&gt;
+N182 G1 Y-80.&lt;br&gt;
+N184 G0 Z100.&lt;br&gt;
+N186 M5&lt;br&gt;
+N187 G05.1 Q0&lt;br&gt;
+N188 X-260. Y150.&lt;br&gt;
+N192 M30&lt;/p&gt;
+">高速高精代码G05.1 Q0和G05.1 Q1的应用</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/u-pan-tu-biao/"" data-c="
+          &lt;p&gt;首先准备一个做为U盘图标的图片，图片格式为ico格式，可以上网搜索“ico在线制作”也可以用本站介绍的用PS制作ico图标的方法。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;把电脑设置成显示文件的扩展名，把ico格式的图片放在U盘根目录，再“新建”-“文本文档”， 里面写入代码：&lt;/p&gt;
+&lt;p&gt;[autorun]&lt;/p&gt;
+&lt;p&gt;Icon=tubiao.ico&lt;/p&gt;
+&lt;p&gt;图片的名称要和文本里的名称一样。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702816348084.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后保存，重命名文件为 autorun.inf&lt;/p&gt;
+&lt;p&gt;更改文件扩展名选择“是”。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702816366014.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;把这两个文件的属性设置为隐藏即可。正常弹出U盘，再插入U盘就可以看到U盘的图标已经变了。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702816394368.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702816400993.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">自定义U盘图标的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/mastercam-zi-ding-yi-she-zhi/"" data-c="
+          &lt;p&gt;1、在菜单栏或功能区任意空白位置点击鼠标右键，然后选择 自定义功能区。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815743266.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;2、选择要添加自定义功能的位置，然后新建组。比如在 线框 里加一个自定义组。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815760341.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;3、鼠标右键新群组，给新建的组重命名。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815776995.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;4、在左侧找到需要的命令，然后点击添加，就会添加的自定义的位置，完成之后点击确定即可。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815793145.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;5、下图是自定义的结果。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815809884.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;6、右键菜单的自定义也在功能区，上下文菜单就是鼠标右键菜单。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815827132.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;7、在左侧选择需要添加的右键菜单的命令，然后点击添加即可，可以通过右侧的箭头移动位置。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815843731.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;8、还可以移除右键菜单里面的命令，先选中右侧需要移除的选项，然后点击移除即可。&lt;/p&gt;
+">Mastercam自定义功能区和右键菜单的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/mastercam-hui-guang-gao-liang/"" data-c="
+          &lt;p&gt;Mastercam默认使用的是辉光高亮显示，看起来不太好，习惯把这个功能去掉。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815627323.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;鼠标点击 选择设置 按钮&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815644283.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后关闭 使用辉光高亮显示 的选项。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815662851.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">Mastercam去除辉光高亮显示的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/mastercam2023-an-zhuang-fang-fa/"" data-c="
+          &lt;p&gt;安装前首先要关闭系统防火墙和杀毒软件，不过经过实测有些免费杀毒软件不关也没事。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;1、打开安装程序所在文件夹双击（或右键-以管理员身份运行）。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815132597.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2、点击第一项，安装Mastercam。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815149699.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;3、点击下一步。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815172107.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;4、语言选择简体中文。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815187314.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;5、点击配置Mastercam。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815204779.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;6、首先选择公制和所有用户，用户名和公司名随便填，默认共享文件夹占用的磁盘空间比较小，可以放在C盘也可以放在其他盘，但一定要知道在哪个位置，因为安装完之后机床文件和后处理文件要复制的相应的位置，目标文件夹一般放到C盘以外的盘，当然如果C盘够大也无所谓，最后点击完成。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815231570.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;7、点击下一步。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815248212.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;8、选择是，下一步。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815266642.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;9、开始安装，安装完之后点退出就可以了。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815296898.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;10、虽然安装完成了，但是大概率是打不开的，如果软件只是用来学习和研究可以用工具破解，工具有很多种，下图是其中一种比较常用的，选择相应的版本选项，然后点击下面的箭头安装。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815324825.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;11、破解完打开试一下，如果没问题就可以学习草图和建模了，但是最好要把机床文件和后处理文件复制到相应目录，方便把练习的结果处理成G代码，然后放到仿真软件里验证一下看看对不对。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815354995.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815380301.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;12、最后把升级包按顺序安装一下。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815399932.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;软件安装完成，可以正常使用。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702815422478.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安装过程中如果有的文件鼠标双击没反应，就用鼠标右键选择以管理员身份运行。&lt;br&gt;
+软件和工具可以到本站的资源分享页面查看和下载。&lt;/p&gt;
+">Mastercam2023简体中文正式版的安装方法和软件下载</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/zi-dong-guan-ji/"" data-c="
+          &lt;p&gt;有时候用完电脑忘记了关机，而显示器到了设置的时间就自动关闭了，可能主机会连续开好几天都没有发现，可以设置电脑每天到了一定的时间就自动关机。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;第一步：鼠标右键“此电脑”，选择“管理”&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702814822404.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第二步：选择“任务计划程序“，然后选择”创建基本任务“。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702814842464.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第三步：填写标题和描述，内容随意，自己能看懂就行。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702814858985.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第四步：选择“每天”&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702814873481.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第五步：选择启动程序，程序或脚本的内容填写：shutdown&lt;/p&gt;
+&lt;p&gt;添加参数：-s -t 60&lt;/p&gt;
+&lt;p&gt;60的意思是提前60秒有弹窗警告，也可以改成其他的数值，要是有文件没有保存就要及时保存，60秒之后就会自动关机。&lt;/p&gt;
+&lt;p&gt;然后下一步，完成就可以了。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702814891152.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702814904708.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如果想取消每天自动关机，就点左边的“任务计划程序库“，找到自动关机（就是第三步设置的名称）的那个任务，然后鼠标右键-删除即可。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702814922793.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">设置电脑每天到设定的时间就自动关机的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/vericut-bu-xian-shi-ji-chuang/"" data-c="
+          &lt;p&gt;1、 鼠标点击项目名称&lt;br&gt;
+2、 勾选“调用机床仿真口令”&lt;br&gt;
+3、 点击重置按钮&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702814688752.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">VERICUT 9.2.2机床视图窗口不显示机床的解决办法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/mastercam-hou-chu-li-jian-cha/"" data-c="
+          &lt;p&gt;一、四轴用替换轴功能时&lt;br&gt;
+1、查找 substitution&lt;br&gt;
+找到 pxyzcout1 #Axis substitution&lt;br&gt;
+****************&lt;br&gt;
+******************&lt;br&gt;
+*******************&lt;br&gt;
+csav = x&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;∗&lt;/mo&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mn&gt;360&lt;/mn&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;*(360/(pi&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;∗&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;i&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;em&gt;rotdia&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;改&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;为&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;))改为csav = -x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;改&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;为&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.03588em;&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.66666em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;x&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;(360/(pi&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;∗&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;*rotdia&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;∗&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;))&lt;/p&gt;
+&lt;p&gt;就是在x前面加个负号&lt;/p&gt;
+&lt;p&gt;2、后面的&lt;br&gt;
+if (rot_ccw_pos******&lt;br&gt;
+在if的前面加#号&lt;br&gt;
+即改为&lt;br&gt;
+# if (rot_ccw_pos******&lt;/p&gt;
+&lt;p&gt;二、五轴后处理需要检查或修改的内容&lt;br&gt;
+1、定义机床结构&lt;/p&gt;
+&lt;p&gt;0 Table/Table&lt;br&gt;
+1 Tilt Head/Table&lt;br&gt;
+2 Head/Head&lt;br&gt;
+3 Nutator Table/Table&lt;br&gt;
+4 Nutator Tilt Head/Table&lt;br&gt;
+5 Nutator Head/Head&lt;/p&gt;
+&lt;p&gt;备注：Nutator是指非正交&lt;br&gt;
+查看或修改的位置在&lt;br&gt;
+mtype&lt;br&gt;
+实际机床是什么结构就改为相应数字&lt;/p&gt;
+&lt;p&gt;2、定义旋转轴的名称&lt;/p&gt;
+&lt;p&gt;查看或修改的位置在&lt;br&gt;
+#Assign axis address&lt;/p&gt;
+&lt;p&gt;str_pri_axis 第一旋转轴（也可以理解为第五轴）&lt;br&gt;
+str_sec_axis 第二旋转轴（也可以理解为第四轴）&lt;br&gt;
+一般情况旋转角度范围大的是第一旋转轴，旋转角度范围小的是第二旋转轴&lt;/p&gt;
+&lt;p&gt;3、设置旋转轴的行程&lt;/p&gt;
+&lt;p&gt;查看或修改的位置在&lt;br&gt;
+#Set the absolute angles for axis travel on primary&lt;/p&gt;
+&lt;p&gt;第一旋转轴（第五轴）&lt;br&gt;
+pri_limlo 最小&lt;br&gt;
+pri_limhi 最大&lt;/p&gt;
+&lt;p&gt;第二旋转轴（第四轴）&lt;br&gt;
+sec_limlo 最小、&lt;br&gt;
+sec_limhi 最大&lt;/p&gt;
+&lt;p&gt;备注：各有两个，都设置一样就行了&lt;br&gt;
+如果实际旋转角度是-120到+120，而实际加工过程中不想让它往后转，可以在这里限制，比如限制在-30到115&lt;/p&gt;
+&lt;p&gt;4、旋转轴零度位置&lt;br&gt;
+如果后处理读取机床定义，可在机床定义里设置&lt;/p&gt;
+&lt;p&gt;下面是常见机床结构零点位置&lt;/p&gt;
+&lt;p&gt;机床结构 ： AC AB BC&lt;/p&gt;
+&lt;p&gt;rotaxis1$： vecy vecz vecx&lt;/p&gt;
+&lt;p&gt;rotdir1$ ： vecx vecx vecy&lt;/p&gt;
+&lt;p&gt;rotaxis2$： vecz vecz vecz&lt;/p&gt;
+&lt;p&gt;rotdir2$ : vecy vecy vecx&lt;/p&gt;
+&lt;p&gt;5、旋转轴自动松开夹紧&lt;br&gt;
+功能开关由 use_clamp 控制，0表示关闭，1表示开启&lt;br&gt;
+代码位置&lt;br&gt;
+# Primary axis lock/unlock 第一旋转轴（第五轴）&lt;br&gt;
+spunlock 松开&lt;br&gt;
+splock 夹紧&lt;br&gt;
+# Secondary axis lock/unlock 第二旋转轴（第四轴）&lt;br&gt;
+ssunlock 松开&lt;br&gt;
+sslock 夹紧&lt;/p&gt;
+&lt;p&gt;具体用什么代码根据机床系统确定&lt;/p&gt;
+&lt;p&gt;6、检查实际机床两个旋转轴的旋转中心是否重合&lt;br&gt;
+如果不重合就需要在后处理中修改差值&lt;br&gt;
+saxisx&lt;br&gt;
+saxisy&lt;br&gt;
+AC轴，如果C轴比A轴差10，那就在saxisy后输入-10&lt;br&gt;
+BC轴在X方向有差值就修改saxisx&lt;/p&gt;
+">Mastercam四轴五轴后处理需要检查或修改的地方</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/ps-ico/"" data-c="
+          &lt;p&gt;Photoshop默认不能把图片直接存储为ico格式，需要安装一个插件：Icoformat.8bi&lt;/p&gt;
+&lt;p&gt;可以直接上网搜索Icoformat.8bi 下载。&lt;/p&gt;
+&lt;p&gt;也可以到本站的资源分享页面下载。&lt;/p&gt;
+&lt;p&gt;下载之后复制粘贴到Photoshop安装目录下的Required\Plug-Ins\File Formats 文件夹里&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702813969531.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;重新打开Photoshop，把需要保存为ico格式的图片大小改为256*256以下（图片尺寸大于256保存的时候不会出现ico格式选项），然后选择“存储为”之后就会出现ico格式的选项了。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702813989731.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">用Photoshop制作ico格式图片的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/ji-zuo-biao-g15-g16/"" data-c="
+          &lt;p&gt;G16是开始使用极坐标&lt;/p&gt;
+&lt;p&gt;G15是结束极坐标&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;例如按下图尺寸加工三个孔，用极坐标编程有两种方法。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702813085185.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第一种方法，使用绝对坐标G90，比较直观。&lt;/p&gt;
+&lt;p&gt;G54 G90 G80 G00 G43 H1 Z100;&lt;/p&gt;
+&lt;p&gt;X0 Y0 M03 S600; （刀具定位到哪里都可以）&lt;/p&gt;
+&lt;p&gt;G16 G00 Z10 M08; （开始极坐标）&lt;/p&gt;
+&lt;p&gt;G98 G81 X50 Y30 Z-20 R3 F50; （X50表示半径，Y30表示角度）&lt;/p&gt;
+&lt;p&gt;Y150; （第二个孔的位置在150度）&lt;/p&gt;
+&lt;p&gt;Y270; （第二个孔的位置在270度）&lt;/p&gt;
+&lt;p&gt;G15 G80 G00 Z100 M09; （结束极坐标）&lt;/p&gt;
+&lt;p&gt;M05;&lt;/p&gt;
+&lt;p&gt;M30;&lt;/p&gt;
+&lt;p&gt;第二种方法，使用相对坐标G91，更加方便。&lt;/p&gt;
+&lt;p&gt;G54 G90 G80 G00 G43 H1 Z100;&lt;/p&gt;
+&lt;p&gt;X0 Y0 M03 S600;&lt;/p&gt;
+&lt;p&gt;G16 G00 Z10 M08; （开始极坐标）&lt;/p&gt;
+&lt;p&gt;G98 G81 X50 Y30 Z-20 R3 F50; （X50表示半径，Y30表示角度）&lt;/p&gt;
+&lt;p&gt;G91 Y120; （用G91，此点位置相对于上个点移动了120度）&lt;/p&gt;
+&lt;p&gt;Y120;&lt;/p&gt;
+&lt;p&gt;G15 G90 G80 G00 Z100 M09; （结束极坐标并结束相对坐标）&lt;/p&gt;
+&lt;p&gt;M05;&lt;/p&gt;
+&lt;p&gt;M30;&lt;/p&gt;
+&lt;p&gt;极坐标编程需要机床系统的支持，上面代码只在法兰克系统中测试过可用。&lt;/p&gt;
+">加工中心极坐标指令G15、G16的使用方法和实例</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/zi-cheng-xu-m98-m99/"" data-c="
+          &lt;p&gt;1、子程序的格式：&lt;/p&gt;
+&lt;p&gt;O____;&lt;/p&gt;
+&lt;p&gt;******;&lt;/p&gt;
+&lt;p&gt;******;&lt;/p&gt;
+&lt;p&gt;M99;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;2、调用子程序的格式：&lt;/p&gt;
+&lt;p&gt;（1）M98 P_ _ _ _ _ _ _; 前3位为调用次数，后4位为子程序号。&lt;/p&gt;
+&lt;p&gt;（2）M98 P_ _ _ _ L_ _ _; P后面是子程序号，L后面是调用次数。&lt;/p&gt;
+&lt;p&gt;一般就上面两种格式，不同的机床系统调用子程序的格式不一样。&lt;/p&gt;
+&lt;p&gt;3、子程序应用实例&lt;/p&gt;
+&lt;p&gt;如下图，在一个150*100的板上铣20个∅18的孔，孔深为-10，&lt;/p&gt;
+&lt;p&gt;用∅10的平底铣刀，X方向距离为30，Y方向距离为20。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702812952049.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;设左上角第一个圆的圆心为编程原点。&lt;/p&gt;
+&lt;p&gt;O0000; （主程序）&lt;br&gt;
+G54 G90 G00 G43 H1 Z100;&lt;br&gt;
+X-30 Y20 M03 S900; （刀具定位到这里是为了方便子程序中刀具的移动）&lt;br&gt;
+Z30 M08;&lt;br&gt;
+M98 P0001 L4; （调用第一个子程序，实现Y方向的4次移动）&lt;br&gt;
+G90 G00 Z100 M09;&lt;br&gt;
+M05;&lt;br&gt;
+M30;&lt;/p&gt;
+&lt;p&gt;O0001; （第一个子程序，用于Y方向的移动）&lt;br&gt;
+G91 G00 Y-20;&lt;br&gt;
+M98 P0002 L5; （调用第二个子程序，实现X方向的5次移动）&lt;br&gt;
+G91 G00 X-150; （第二个子程序执行5次之后第一行孔加工完成，X方向需要移回原来位置，再继续移动Y方向，Y一共移动4次）&lt;br&gt;
+M99;&lt;/p&gt;
+&lt;p&gt;O0002; （第二个子程序，用于X方向移动）&lt;br&gt;
+G91 G00 X30;&lt;br&gt;
+M98 P0003 L1; （调用第三个子程序一次，完成一个孔的加工）&lt;br&gt;
+M99;&lt;/p&gt;
+&lt;p&gt;O0003; （第三个子程序，开始加工∅18孔）&lt;br&gt;
+G91 G00 Z-27; （用G91是相对移动，现在是距工件表面3）&lt;br&gt;
+G01 Z-2 F50; （现在距离工件表面还有1毫米开始加工）&lt;br&gt;
+G01 X4;&lt;br&gt;
+M98 P0004 L11; （调用第四个子程序，分11层加工，因为是在工件上方1毫米开始加工，11次刚好加工到-10）&lt;br&gt;
+G02 I-4 J0; （补平底面）&lt;br&gt;
+G01 X-4; （回到孔的圆心位置，因为下一个孔是相对移动30）&lt;br&gt;
+G90 G00 Z30; （提刀后返回第2个子程序，继续X移动30）&lt;br&gt;
+M99;&lt;/p&gt;
+&lt;p&gt;O0004; （第四个子程序，分层铣削子程序）&lt;br&gt;
+G91 G02 I-4 J0 Z-1 F30;&lt;br&gt;
+M99;&lt;/p&gt;
+&lt;p&gt;使用子程序的好处是可以避免重复编程，而且上面实例中无论要加工多少个孔，只要是按照固定的间距排列，只需要改动几个数值就可以了。&lt;/p&gt;
+">加工中心子程序M98、M99的使用方法和实例</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/g85-g86-g88-g89-g76/"" data-c="
+          &lt;p&gt;G85：格式为，G85 X_ Y_ Z_ R_ F_ ;&lt;/p&gt;
+&lt;p&gt;主轴正转从R点以进给速度F至孔底然后以同样进给速度退回至R点。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;G86：格式为，G86 X_ Y_ Z_ R_ F_ ;&lt;/p&gt;
+&lt;p&gt;主轴正转从R点以进给速度F至孔底然后主轴停转，快速退回至R点，会在孔壁留下刀痕。&lt;/p&gt;
+&lt;p&gt;G88: 格式为，G88 X_Y_Z_R_P_F_;&lt;/p&gt;
+&lt;p&gt;与G86类似，但在孔底时停顿一定时间，然后停止转动，程序暂停，用手动模式将刀具从孔中退出，一般不用。&lt;/p&gt;
+&lt;p&gt;G89：格式为，G89 X_Y_Z_R_P_F_;&lt;/p&gt;
+&lt;p&gt;与G85类似，但在孔底有暂停。&lt;/p&gt;
+&lt;p&gt;G76: 格式为，G76 X_Y_Z_R_P_Q_F_;&lt;/p&gt;
+&lt;p&gt;精镗循环指令，镗至孔底时有三个动作：①进给暂停（P）, ②主轴定向停止（需要机床性能的支持），③刀具沿刀尖反方向移动（Q），最后刀具退出，可以避免刀尖划伤精镗表面。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702812825737.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;G76是最好用的精镗孔代码，但在使用前一定要确定好主轴定向停转时刀尖的方向和移动的方向，移动的距离不能太多，一般只要刀尖离开孔壁一点就可以，防止方向错误损伤刀柄和机床。&lt;/p&gt;
+">加工中心镗孔加工代码G85 G86 G88 G89 G76的用法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/g74-g84/"" data-c="
+          &lt;p&gt;G74：左旋攻螺纹，不常用。&lt;/p&gt;
+&lt;p&gt;G84：右旋攻螺纹，常用。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;格式为：G98（G99）G74（G84）X_ Y_ Z_ R _ F_;&lt;/p&gt;
+&lt;p&gt;如图所示：&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702812607352.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;G74是由参考高度R反转切至孔底B（由Z值决定），再正转退回到R。&lt;/p&gt;
+&lt;p&gt;G84是由参考高度R正转切至孔底B（由Z值决定），再反转退回到R。&lt;/p&gt;
+&lt;p&gt;发那科系统中进给F值等于转速乘以螺距，比如转速S为每分钟100转，螺距为1.5，那F值就是每分钟100*1.5=150&lt;/p&gt;
+&lt;p&gt;上面的代码在实际应用中只适合攻丝很少的一段距离，丝锥退回之后就不能再重复继续加深了，并且要使用带弹性的攻丝专用刀柄。如果需要用丝锥加工很深的螺纹就需要开启刚性攻丝，前面加上代码M29 S***，并且加上Q值，刚性攻丝不能使用弹性攻丝刀柄，用丝锥加工深一点的螺纹总是有断丝锥的可能，最好还是用螺纹铣刀铣比较好。&lt;/p&gt;
+">加工中心螺纹加工代码G74、G84的用法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/g73-g81-g82-g83-g98-g99-g80/"" data-c="
+          &lt;p&gt;格式为：G98（或G99）G_ _ X_ Y_ Z_ R_ Q_ P_ F_;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;如下图所示：&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702812370839.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;G98的作用是一个孔加工完之后刀具返回安全高度，再换下一个孔，就是最靠近打孔循环程序那一行上面的Z的值。&lt;/p&gt;
+&lt;p&gt;G99的作用是一个孔加工完之后刀具返回参考高度R，再换下一个孔。&lt;/p&gt;
+&lt;p&gt;X、Y是需要加工的孔的位置。&lt;/p&gt;
+&lt;p&gt;Z值是指需要加工的孔的深度，为负数。&lt;/p&gt;
+&lt;p&gt;R为参考高度，就是开始以进给F的速度向下运行的位置。&lt;/p&gt;
+&lt;p&gt;Q值只在G73、G83中起作用，每次抬刀之后向下切削的深度。&lt;/p&gt;
+&lt;p&gt;P值只在G82中起作用，是指刀具在孔底暂停的时间，单位是毫秒（ms）。（1秒=1000毫秒）&lt;/p&gt;
+&lt;p&gt;F值为进给速度，单位是mm/min，每分钟进给多少毫秒。&lt;/p&gt;
+&lt;p&gt;G73：高速深孔加工。&lt;/p&gt;
+&lt;p&gt;例如：G98 G73 X0 Y0 Z-50 R3 Q5 F100;&lt;/p&gt;
+&lt;p&gt;在X0 Y0的位置加工深度为50的孔，每向下切削Q5之后抬刀到d（d值由机床系统设定），有利于断屑排屑，但在实际应用中有些材质用这种抬刀方式并不能很好的排屑，虽然加工速度快但也要根据实际情况决定是否使用。&lt;/p&gt;
+&lt;p&gt;G81：一般用于不太深的孔。&lt;/p&gt;
+&lt;p&gt;例如：G98 G81 X0 Y0 Z-10 R3 F100;&lt;/p&gt;
+&lt;p&gt;从参考高度（R3）开始，切削到-10后直接快速提刀，中途不抬刀。&lt;/p&gt;
+&lt;p&gt;G82：一般用于对孔底要求光滑的加工，一般用于倒角。&lt;/p&gt;
+&lt;p&gt;例如：G98 G82 X0 Y0 Z-5 R3 P1000 F100;&lt;/p&gt;
+&lt;p&gt;与P值配合，钻到孔底（Z-5）停顿1000毫秒，使孔底光滑。&lt;/p&gt;
+&lt;p&gt;G83：适用于深孔加工。&lt;/p&gt;
+&lt;p&gt;例如：G98 G83 X0 Y0 Z-50 R3 Q5 F100;&lt;/p&gt;
+&lt;p&gt;与G73不同的是每次切削Q5之后抬刀到达参考高度R3。更有利于排屑。&lt;/p&gt;
+&lt;p&gt;G80：结束孔加工循环。在所有孔加工完成之后的程序段中要加入G80，结束循环，如果不加G80可能在下一个XY坐标中还继续打孔的动作。&lt;/p&gt;
+">加工中心孔加工代码G73、G81、G82、G83及辅助代码G98、G99、G80的使用方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/g43-g44-g49/"" data-c="
+          &lt;p&gt;G43：刀具向上补偿。&lt;/p&gt;
+&lt;p&gt;G44：刀具向下补偿。&lt;/p&gt;
+&lt;p&gt;G49：取消刀具长度补偿。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;一般一个加工程序中习惯只用G43或只用G44，不然容易弄混。&lt;/p&gt;
+&lt;p&gt;刀具长度补偿就是不同刀具与基准面（基准高度0，可以是某一把刀对到工件表面或某个位置的数值，也可以是根据需要设定的一个数值）的长度差。&lt;/p&gt;
+&lt;p&gt;如下图：&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702812245167.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;假设基准高度为机床坐标Z-100（这时候是Z-100设置为0），第一把刀的机床坐标为-50，第二把刀的机床坐标为-150。&lt;/p&gt;
+&lt;p&gt;如果程序中用G43，H1的补偿值为50，H2的补偿值为-50。&lt;/p&gt;
+&lt;p&gt;如果程序中用G44，H1的补偿值为-50，H2的补偿值为50。&lt;/p&gt;
+&lt;p&gt;在实际工作中一般大部分人都是用G43的，很少见到有人用G44 。&lt;/p&gt;
+&lt;p&gt;如果把第一把刀的机床坐标-50设为基准高度0，用G43，H1里面就输入0，H2里面就输入-100。&lt;/p&gt;
+&lt;p&gt;一般程序中，正常情况下是要用G49取消前面的G43的，但实际应用中比如G43 H2就已经取消了前面的G43 H1，可以根据实际情况决定是否省略G49。&lt;/p&gt;
+">数控铣床、加工中心刀具长度补偿代码G43、G44、G49</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/shun-xi-ni-xi-g40-g41-g42/"" data-c="
+          &lt;p&gt;顺铣和逆铣只有在铣侧壁的时候才能明显的区分出来，其他情况比如铣平面的时候顺铣和逆铣一般是同时存在的。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;如下图所示，假设刀具位置不动，工件相对于刀具左右运动，区分顺铣和逆铣主要看刀具与工件的接触位置，刀具的切削方向和工件的运动方向一致为顺铣，相反就是逆铣。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702812000199.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;逆铣一般适用于吃刀量比较大的粗加工，顺铣一般适用于吃刀量比较小的精加工，顺铣加工的表面粗糙度要明显好于逆铣，顺铣用于粗加工一般要配合高转速，吃刀量和进给速度要根据实际情况确定。&lt;/p&gt;
+&lt;p&gt;刀具半径补偿G40、G41、G42代码的用法&lt;/p&gt;
+&lt;p&gt;G40：取消刀具半径补偿指令&lt;/p&gt;
+&lt;p&gt;G41：刀具半径左补偿指令，顺铣的时候用。&lt;/p&gt;
+&lt;p&gt;G42：刀具半径右补偿指令，逆铣的时候用。&lt;/p&gt;
+&lt;p&gt;使用G41、G42一种情况是在编程时不考虑刀具半径，按图纸尺寸编程即可，在刀补的相应位置输入刀具半径，另一种情况是在刀具磨损时直接在刀补的相应位置输入相应的磨损数值，不用在程序里去改数值。&lt;/p&gt;
+&lt;p&gt;指令格式：G01（或G00）X_ Y_D_ F_;&lt;/p&gt;
+&lt;p&gt;D为刀具号，如D01、D02等，数值在机床中刀补、偏置中输入。&lt;/p&gt;
+&lt;p&gt;如下图所示：&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702812043675.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;G41：铣外形方向为顺时针，铣内腔方向为逆时针，如上图A、B所示，刀具在工件左边，为顺铣。&lt;/p&gt;
+&lt;p&gt;G42：铣外形方向为逆时针，铣内腔方向为顺时针，如上图C、D所示，刀具在工件右边，为逆铣。&lt;/p&gt;
+&lt;p&gt;G41、G42只能在G00、G01后面或同行使用，不能放在G02、G03后面，也就是必须要走一段直线，使用后要加G40取消补偿，个人觉得在手工编程时不是很方便，手工编程一般都是很简单的图形，还不如在编程时考虑刀具半径和直接在程序里改数值更直观一些。软件编程时会根据相应的选项自动添加G41或G42，当刀具磨损时直接在机床里相应的刀具补偿项里输入相应的数值即可，需要注意的是无论是手工编程还是软件编程在加工开始进刀的时候一定要有一段直线。&lt;/p&gt;
+">顺铣和逆铣的区分方法以及刀具半径补偿代码G40、G41、G42的使用方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/g90-g91/"" data-c="
+          &lt;p&gt;G90：绝对坐标（就是以设定的工件零点为参考点）&lt;/p&gt;
+&lt;p&gt;G91：增量坐标（就是以刀具当前所在的位置为参考点）&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;如下图所示：&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702811836952.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;假设当前刀具位置在A点，目标是移动到B点。&lt;/p&gt;
+&lt;p&gt;G90 G00 X20 Y20 绝对坐标就是以工件零点（X0 Y0）为基准。&lt;/p&gt;
+&lt;p&gt;G91 G00 X10 Y10 相对坐标是以当前刀具位置（A点）为基准。&lt;/p&gt;
+">数控铣床、加工中心代码G90和G91的区别和用法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/g02-g03/"" data-c="
+          &lt;p&gt;G02：顺时针圆弧插补（就是刀具按顺时针方向走圆弧）&lt;/p&gt;
+&lt;p&gt;G03：逆时针圆弧插补（就是刀具按逆时针方向走圆弧）&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;可以是整圆也可以是一段圆弧，一般手工编程能用到整圆、半圆和四分之一圆。&lt;/p&gt;
+&lt;p&gt;指令格式：&lt;/p&gt;
+&lt;p&gt;G02（或G03）X_ Y_ Z_ I_ J_K_（或R）F_;&lt;/p&gt;
+&lt;p&gt;一般建议小于等于180度角时用R表示，R为圆弧半径，大于等于180度时用IJK表示，当然IJK是全能的，整圆必须用IJK表示（有些机床系统并不能识别K，一般用Z表示，也就是IJZ）。&lt;/p&gt;
+&lt;p&gt;XYZ为圆弧终点坐标，IJK为圆心在XYZ轴上相对于圆弧起点的坐标，就是圆心（X0,Y0）相对于起点所移动的距离。&lt;/p&gt;
+&lt;p&gt;如下图所示：A:X0 Y10 , B:X10 Y0 , C:X0 Y-10，D:X-10 Y0&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702811738833.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A-B: G02 X10 Y0 I0 J-10&lt;/p&gt;
+&lt;p&gt;终点坐标是X10 Y0,圆心（X0 Y0）相对于起点（X0 Y10）X没有变，所以I是0。Y负了10，所以J是-10。&lt;/p&gt;
+&lt;p&gt;B-A: G03 X0 Y10 I-10 J0&lt;/p&gt;
+&lt;p&gt;终点坐标是X0 Y10,圆心（X0 Y0）相对于起点（X10 Y0）X负了10，所以I是-10。Y没有变，所以J是0。&lt;/p&gt;
+&lt;p&gt;B-C: G02 X0 Y-10 I-10 J0    C-B: G03 X10 Y0 I0 J10&lt;/p&gt;
+&lt;p&gt;C-D: G02 X-10 Y0 I0 J10     D-C: G03 X0 Y-10 I10 J0&lt;/p&gt;
+&lt;p&gt;D-A: G02 X0 Y10 I10 J0      A-D: G03 X-10 Y0 I0 J-10&lt;/p&gt;
+&lt;p&gt;当是整圆时A-A: G02（或G03） X0 Y10 I0 J-10&lt;/p&gt;
+&lt;p&gt;当终点坐标与起点坐标重合时也可省略终点坐标：&lt;/p&gt;
+&lt;p&gt;G02 I0 J-10 F100;&lt;/p&gt;
+&lt;p&gt;建议小于等于180度时用R表示:&lt;/p&gt;
+&lt;p&gt;A-B: G02 X10 Y0 R10&lt;/p&gt;
+&lt;p&gt;A-C:G02 X0 Y-10 R10 （R值实际应用中要考虑刀具半径）&lt;/p&gt;
+">数控铣床、加工中心代码G02、G03的含义和用法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/g00-g01/"" data-c="
+          &lt;p&gt;G00 的作用是使刀具从一点快速定位到另一点，每个轴分别运动，都以最快的速度移动到相应位置，移动的速度一般由机床中的参数设定。&lt;/p&gt;
+&lt;p&gt;G01的作用是指定一个坐标轴按进给速度移动或多个坐标轴同时按进给速度联动，移动或联动的进给速度由程序中F值确定。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;如下图所示：&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702811579926.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;假设需要将刀具从A点移动到B点&lt;/p&gt;
+&lt;p&gt;首先需要将刀具位置移动到A点，G90 G00 X20 Y20;&lt;/p&gt;
+&lt;p&gt;G00的用法是：G00 X50 Y30; 此时X轴Y轴分别运动（一般机床设定的XY轴快速移动的速度都是相同的），也就是Y已经到30停止了，而X也刚到30，还差20，X轴需要继续移动20才会停止。X沿着蓝色虚线移动了30，Y沿着蓝色虚线移动了10，是相互独立分别进行的。&lt;/p&gt;
+&lt;p&gt;G01的用法是：G01 X50 Y30 F100; 此时刀具从A点沿着绿色的虚线移动到B点，X轴Y轴联动，两个轴同时开始移动也同时停止，移动速度是每分钟100毫米。&lt;/p&gt;
+">数控铣床、加工中心代码G00和G01的用法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/qi-yong-tu-pian-cha-kan-qi/"" data-c="
+          &lt;p&gt;有些版本的win10系统的图片查看器默认是关闭的，打开图片文件会默认用画图工具打开，非常的不方便，安装其他的看图软件又怕有各种弹窗广告，所以如果只是简单的查看一下图片还是用系统内置的图片查看器比较好。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;第一步：在开始菜单里找到“运行”，或按键盘上的win+R键，打开运行窗口。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702811066179.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第二步：输入regedit 打开注册表编辑器。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702811085475.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第三步：找到下面位置&lt;/p&gt;
+&lt;p&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&lt;/p&gt;
+&lt;p&gt;鼠标双击右侧窗口第二个或第三个任意一个即可&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702811102635.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第四步：先复制 PhotoViewer.FileAssoc.Tiff，一会再用。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702811126345.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第五步：在空白的地方鼠标右键——新建——字符串值&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702811142435.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第六步：输入常用的图片格式，如.jpg .jpeg .png .bmp等，输入哪种格式就能打开哪种格式的图片。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702811159892.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第七步：依次双击刚输入的，然后在数值里面粘贴刚才复制的内容。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702811177972.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第八步：在开始菜单里找到设置，然后找到应用——默认应用——图片查看器选择Windows照片查看器。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702811194427.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702811208668.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702811220260.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702811226108.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">启用Win10系统自带的图片查看器的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/qi-yong-guan-li-yuan-zhang-hu/"" data-c="
+          &lt;p&gt;原版Windows系统在安装时都是新建了一个账户，这个账户的权限要比管理员账户的权限低一些，有些操作会提示没有权限，或需要用鼠标右键选择“以管理员身份运行”，这就不如直接登录系统管理员账户方便了。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;Win7和win10的操作基本类似，以win10为例，第一步，鼠标右键“此电脑”，选择“管理”。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702810861357.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第二步，先点击“本地用户和组”左边的小箭头，再点击“用户”，最后双击Administrator。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702810879635.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第三步，把“账户已禁用”前面的勾去掉，然后应用。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702810893837.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最后按Ctrl+Alt+Del就可以切换账户了，也可以在开始菜单里面找切换账户的功能。&lt;/p&gt;
+">Windows系统启用管理员账户（Administrator）的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/shan-chu-tu-biao/"" data-c="
+          &lt;p&gt;在win10系统中打开此电脑后发现有很多文件图标是不需要的，尤其是一些网盘应用会在C盘前面加一个图标，有的能够用鼠标右键删除，有的需要在软件设置更改一下就行了，而有的既不能右键删除也不能在设置里改成不显示，这就需要手动强制删除了。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;第一步：按键盘Win+R键，或在开始菜单里找到“运行”，打开运行窗口，输入regedit，打开注册表编辑器。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702810631134.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第二步：找到下面这两个值。&lt;/p&gt;
+&lt;p&gt;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace&lt;/p&gt;
+&lt;p&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace&lt;/p&gt;
+&lt;p&gt;这两个只有前面第一项不一样，后面都一样。&lt;/p&gt;
+&lt;p&gt;第三步：鼠标右键删除不需要的。&lt;/p&gt;
+&lt;p&gt;例如0DB7E03F-FC29-4DC6-9020-FF41B59E513A对应值“3D对象”&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702810653453.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其他的是&lt;/p&gt;
+&lt;p&gt;视频：f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a&lt;/p&gt;
+&lt;p&gt;图片：24ad3ad4-a569-4530-98e1-ab02f9417aa8&lt;/p&gt;
+&lt;p&gt;文档：d3162b92-9365-467a-956b-92703aca08af&lt;/p&gt;
+&lt;p&gt;下载：088e3905-0323-4b02-9826-5d99428e115f&lt;/p&gt;
+&lt;p&gt;音乐：3dfdf296-dbec-4fb4-81d1-6a3438bcf4de&lt;/p&gt;
+&lt;p&gt;桌面：B4BFCC3A-DB2C-424C-B029-7FE99A87C641&lt;/p&gt;
+&lt;p&gt;下图这样的如果是安装的网盘等软件的图标，点一下相应的值右面就会显示应用的名称，如果是不需要的右键直接删除就行了&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702810676419.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">Win10系统删除此电脑中多余图标的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/jin-zhi-xi-tong-geng-xin/"" data-c="
+          &lt;p&gt;正常来说系统补丁当然是越全越好，但是实际使用的过程中发现win10补丁更新后经常产生一些特殊的问题，例如更新导致了某些软件不能正常使用、打印机不能使用等一些问题。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;方法一：通过修改组策略禁止自动更新。&lt;/p&gt;
+&lt;p&gt;在开始菜单中找到“运行”窗口，或按“Win+R”快捷键，输入“gpedit.msc”，打开本地组策略。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702810186741.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;依次找到(计算机配置—管理模板—Windows组件—Windows更新，双击“配置自动更新”)&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702810212369.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后选择“已禁用”，再点击应用或确定，重启电脑后就可以了。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702810234608.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;方法二：通过工具直接更改设置。&lt;/p&gt;
+&lt;p&gt;在这个网站里（https://www.sordum.org/）有一个工具叫做Windows Update Blocker，可以关闭更新也可以开启更新，非常实用。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702810260051.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以到官网下载最新版，也可以到本站的资源分享页面下载。&lt;/p&gt;
+&lt;p&gt;虽然禁止了自动更新，但仍然可以手动更新，点击“检查更新”就会安装更新补丁。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702810383676.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">禁止Win10系统自动更新系统补丁的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/jin-zhi-zi-dong-geng-xin-qu-dong/"" data-c="
+          &lt;p&gt;一般情况下电脑硬件的驱动都安装完后如果没什么问题是不需要更新的，不一定最新版本的就是最好的，Win10系统默认会更新硬件的最新驱动，有时候会带来未知的问题，如果不需要Win10自动更新硬件驱动，就可以把这个功能关掉。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;关闭的方法：&lt;/p&gt;
+&lt;p&gt;第一步：同时按键盘上的“Win+R”键，或在“开始”菜单里找到“Windows系统”里面的“运行”，打开“运行”。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702727801004.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第二步：在“运行”里面输入“gpedit.msc”，然后单击“确定”，打开本地组策略编辑器。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702727818415.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第三步：依次找到“计算机配置→管理模板→Windows组件→Windows更新”，然后找到“Windows更新不包括驱动程序”，双击此项。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702727833553.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第四步：选择“已启用”，然后“确定”，重启电脑之后就生效了。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702727851167.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">禁止Win10系统自动更新硬件驱动的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/guan-bi-zi-dong-bo-fang/"" data-c="
+          &lt;p&gt;找到控制面板里的“自动播放”，把“为所有媒体和设备使用自动播放”前面的勾去掉，可以防止U盘里的病毒自动运行。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702727622665.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;打开控制面板里的“系统”，或是在桌面上右键“此电脑（计算机）”选择“属性”，点击“远程设置”或“系统高级设置”，在弹出的新窗口里点击“远程”选项卡，把“允许远程协助连接这台计算机”前面的勾去掉，然后应用即可。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702727643904.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">关闭自动播放和系统自带的远程协助提高系统安全</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/dian-yuan-xuan-xiang-you-hua/"" data-c="
+          &lt;p&gt;此项主要更改一下硬盘自动关闭时间、USB设置和系统散热方式设置，Win7、Win10基本差不多，下面是以Win10为例，首先打开控制面板里的“电源选项”，点击左侧的“选择关闭显示器的时间”。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702727473705.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;然后再点击“更改高级电源设置”，这里的“关闭显示器”和“使计算机进入睡眠状态”的时间可以根据需要设置。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702727495697.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;“在此时间后关闭硬盘”一般设置为0，表示从不关闭，如果需要电脑在某个时间后自动休眠可以在上一步睡眠选项那里设置。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702727513920.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;禁用USB选择性暂停，防止USB设备出现短暂的无法使用的状态。&lt;/p&gt;
+&lt;p&gt;散热方式改成“被动”，CPU散热风扇就会自动调节转速，就是CPU温度低时风扇转速低，CPU温度升高后，风扇自动提高转速。&lt;/p&gt;
+&lt;p&gt;都设置完成后点击“应用”就可以了。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702727535655.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">Windows系统电源选项里的优化设置</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/jia-kuai-guan-ji/"" data-c="
+          &lt;p&gt;有时候电脑关机速度慢是因为关机时系统要等待其他程序关闭后才关机，尤其是后台运行的东西很多的时候显得关机速度特别慢，加快电脑的关机速度就是要系统不等这些运行的程序结束，而直接关闭电脑。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;具体的设置方法，首先要打开“运行”窗口，下面以Win10为例，鼠标右键“开始”按钮，然后选择“运行”。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702727325801.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后输入gpedit.msc ，打开组策略编辑器。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702727339914.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;依次找到“计算机配置-管理模板-系统-关机选项”，双击“关闭会阻止或取消关机的应用程序的自动终止功能”&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702727355574.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后选择“已禁用”，最后点应用或确定，这样电脑关机的速度就会快很多。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702727372134.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">加快电脑关机速度的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/guan-bi-qi-dong-xiang/"" data-c="
+          &lt;p&gt;有的软件本身随着电脑的启动自己开启，软件设置里却没有关闭这个功能的选项，这就需要在电脑的系统设置里关闭这个软件的自启动功能。&lt;/p&gt;
+&lt;p&gt;Win7系统比较麻烦一些，需要按照下面步骤操作。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;1、 打开控制面板，单击“系统和安全”。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702726815089.JPG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2、单击“管理工具”&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702726832810.JPG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;3、双击“系统配置”&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702726857516.JPG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;4、单击“启动”选项&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702726878461.JPG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;5、把不需要开机启动的软件前面的√去掉，然后应用，按提示重启电脑即可。注意不要把有用的禁用了，例如各种驱动程序。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702726895381.JPG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Win10系统比较方便，在任务管理器中就可以直接设置，在任务栏上点击鼠标右键，打开任务管理器，然后选择“启动”选项，选中不需要开机启动的选项，再点击右下角的“禁用”即可。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702726914078.JPG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702726920534.JPG&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">关闭电脑开机自动启动的软件（加快开机速度）的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/zhuan-yi-zhuo-mian/"" data-c="
+          &lt;p&gt;很多人都习惯把文件直接保存到桌面，这样用起来很方便，但是如果系统出了问题进不了桌面或进不了系统了，再把这里面一些重要资料找出来就会很麻烦，倒不如提前把桌面的位置放到其他盘，这样只要硬盘不坏就算重装系统这些资料也不会丢失。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;1、按顺序打开C盘——用户——Administrator（一般都是以这个管理员账号登录的系统，如果是以其他账号登录的就选相应的账号），例如把桌面转移（其实桌面也是一个文件夹），右键“桌面”选择“属性”。下面是以win7系统演示的，win10也基本类似。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702382063018.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2、选择“位置”，有两种方法可以更改，一种是点下面的“移动”按钮，选一个文件夹就可以，一种是直接修改文件夹的路径，下图红框里的是可以更改的，最右边那个英文不能变。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702382082490.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;3、如果要放到D盘根目录就这样改，也可以自定义其他位置。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702382102519.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;4、点击“确定”后选择“是”。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702382117981.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;5、然后再选择“是”，这样以后再放到桌面上的文件就到了D盘的“桌面”文件夹里。以后保存到桌面的东西就在D盘了。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702382139340.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其他文件夹的更改方式都是一样的，不一定都要改，可以根据需要来转移位置，一般像“下载”文件夹要改一下，因为有些浏览器和软件的默认下载目录就是这里，如果都下载到这里C盘占用的空间就会越来越大。&lt;/p&gt;
+">把桌面、下载或其他默认文件夹位置转移到D盘或其他盘的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/ghost-xi-tong-an-zhuang/"" data-c="
+          &lt;p&gt;ghost系统是由原版系统封装之后得来的，是为了批量维护电脑而发明的一种技术，目的是为了减少不必要的重复劳动，ghost系统里面一般都提前更新了补丁，集成了驱动安装包，安装了必要的运行库和软件，提前对系统做了相应的优化设置，安装过程完全自动，不像安装原版系统那样还需要手动选择，用ghost系统能够提高计算机维护的效率。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;1、 首先开机进入U盘里的微PE系统。打开（CGI备份还原）。不同的PE里面的工具名称不一样，一般的PE工具里都会有一个类似这种功能的软件，这里是用微PE工具箱做的演示。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702210424547.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2、安装ghost系统其实就是还原系统，选择还原分区。下面选择系统盘，一般都是C盘，不过有的时候PE里盘符不一定对，最好根据大小选择。再下面选择映像文件，一般格式有gho、wim、esd等，可以是放到U盘里的也可以是放到C盘以外的电脑硬盘里的。然后点击（执行）。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702210452117.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;3、下一步，可以什么都不选，等系统还原完手动重启或关机，也可以根据需要选择，如果U盘是第一启动顺序，就选择关机，关机之后拔掉U盘再开机就直接从硬盘启动了，就不用总是盯着电脑要在重启的一瞬间拔掉U盘了。如果硬盘是第一启动顺序，可以选择重启，还原完系统后就什么都不用管了，拔不拔U盘都无所谓，不过最好是拔掉，防止系统部署的时候有错误的硬件识别。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702210478282.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;4、之后就等待系统还原完成，重启或再次开机后会自动部署系统。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702210497698.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;5、用ghost系统有的时候安装完却进不去系统，一般都是由引导文件错误引起的，安装原版系统一般不会出现这个问题。常见于UEFI引导的电脑，因为GPT硬盘的引导文件并不是放在系统盘（C盘）里，传统引导（Legacy）MBR硬盘如果出现这个情况一般是因为封装ghost系统时没有把引导文件一起封装进去。&lt;/p&gt;
+&lt;p&gt;解决方法就是重建引导，如果系统安装完却进不去就再次进入U盘PE，找到修复引导的工具。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702210520162.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;根据实际情况选择，传统BIOS+MBR硬盘就选Legacy，UEFI+GPT硬盘就选UEFI，一般软件都会自动判断的，修复完成之后再重启一般就没问题了。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702210544773.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">用微PE工具箱安装ghost系统的方法以及安装失败的解决方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/yuan-ban-xi-tong-an-zhuang/"" data-c="
+          &lt;p&gt;1、系统的安装，要提前把下载好的原版系统放到U盘里，建议放到根目录，减少出错的可能。进电脑BIOS，把U盘设置成第一启动顺序，或开机按选择启动盘的快捷键选择U盘，开机进入U盘里的PE系统，找到放在U盘里的原版系统，点鼠标右键，选择“装载”后就可以看到下面这些文件，双击exe开始安装系统。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702209726625.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702209751227.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这里演示的是Win7系统，Win10基本也类似，安装过程一般的选项按照提示即可，到了选择安装位置时一定要注意一下，要选择“自定义”选项。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702209772328.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702209787528.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702209807696.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;之后根据硬盘分区时候的不同盘的大小选择C盘，也就是主分区的那个盘。如果之前硬盘没有分区也可以在这里进行分区，选择“驱动器选项（高级）”，不过在这里分区如果是MBR会多出一个100M的空间，这个不用管，装完系统之后并不会显示。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702209838392.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;之后等待安装完成即可，期间会自动重启，最好在第一次重启黑屏的那一瞬间迅速的拔掉U盘，否则重启之后还会进入PE系统，正常的系统安装就不能继续了。如果没有及时拔掉U盘也不用着急，重启再次进入了PE，那就在PE里面关机，然后拔掉U盘再开机，系统就会继续安装了。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702209865239.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最后设置用户名那里可以随便填，最好是英文字母，安装完成之后桌面上只有一个回收站的图标就对了，说明就是原版的系统。&lt;/p&gt;
+&lt;p&gt;安装完之后鼠标在桌面上右键-个性化-更改桌面图标，可以把其它的常用桌面图标调出来。&lt;/p&gt;
+&lt;p&gt;经验总结：我个人装系统的时候是把BIOS里的启动顺序设置为硬盘为第一启动，USB设置为第二启动，然后进PE的时候用的是用选择启动项的快捷键，再选择U盘启动，这样系统安装过程中自动重启就不用拔U盘了，重启之后就自动从硬盘启动了，不用总是一直盯着。&lt;/p&gt;
+&lt;p&gt;注意：原版的Win7系统里是没有USB3.0和NVMe协议固态硬盘补丁的，没有补丁即使有驱动也打不上的，带有USB3.0接口的电脑要装Win7最简单的办法还是找一个集成补丁和驱动的ghost系统比较好。&lt;/p&gt;
+&lt;p&gt;2、驱动的安装，原版系统里自带的驱动比较少，一般只能够保证电脑的正常开机，安装完系统首先就要把所有驱动程序安装或更新一遍。&lt;/p&gt;
+&lt;p&gt;安装驱动最好的方法就是根据自己电脑的品牌或是各个硬件的品牌去官网下载，这样安装的驱动最干净，不会一不小心安装了其它不需要的软件或更改了浏览器的主页，不过就是太麻烦了。&lt;/p&gt;
+&lt;p&gt;还可以用驱动精灵、驱动人生等在线安装和更新驱动的工具，大部分工具都有万能网卡版，即使刚装完的系统不能联网也可以用。&lt;/p&gt;
+&lt;p&gt;如果电脑没有联网的环境，可以用IT天空的万能驱动助理或系统总裁的驱动总裁等离线驱动安装工具，但是由于集成的驱动比较多，安装包比较大。&lt;/p&gt;
+&lt;p&gt;使用工具安装最大的缺点就是如果不够小心非常有可能默认安装一些不需要的软件或是更改了浏览器主页，甚至有些还会锁定主页，正常途径根本改不了。&lt;/p&gt;
+&lt;p&gt;3、到此Windows原版系统的安装算是完成了。&lt;/p&gt;
+&lt;p&gt;关于系统激活与正版、盗版的一些说明，原版系统安装完是没有激活的，如果需要激活系统建议通过正规渠道购买正版密钥，其实不管是安装的原版还是ghost版只要是通过正规渠道购买秘钥激活那就是正版，用一些购物平台买的几块钱的秘钥或是使用激活工具其实都是盗版，没有激活的系统大部分功能也可以用，激活工具最好不要乱用，其实有些工具本来是好的，但是有的被人改过之后又放到了网上，这样的工具除了会激活系统之外还会默默的干一些其他的事情，最后还是建议支持正版。&lt;/p&gt;
+">用U盘PE安装Windows原版系统和硬件驱动的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/ying-pan-fen-qu/"" data-c="
+          &lt;p&gt;这里介绍一下电脑不同启动模式下给硬盘分区的方法，传统BIOS（Legacy）和UEFI模式启动时给硬盘分区的区别和注意事项。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;1、对硬盘进行分区针可以有效的防止重装系统之后重要文件丢失的情况出现，可以不同的盘放不同的文档，方便文档的管理，当然如果电脑有两块以上的硬盘，其中一块盘只装系统和软件也可以不分区的。&lt;/p&gt;
+&lt;p&gt;如果是新组装的电脑分区之前首先要进BIOS看一下或更改一下电脑的启动模式（笔记本和品牌机一般都自带系统，这种情况需要进系统之后在系统里进行分区，本篇文章说的是在U盘PE里给硬盘分区）。开机马上连续不停的按相应的快捷键即可进入BIOS，不同品牌电脑和主板的快捷键不一样，一般都是F1到F12、Esc、Del其中的一个键，有的笔记本可能要配合Fn键，有的开机的时候在屏幕上会显示一两秒的提示，有的一点也不显示。需要根据自己电脑的品牌或主板的品牌去搜索一下（例如可以搜XX主板进BIOS快捷键）。&lt;/p&gt;
+&lt;p&gt;进入BIOS之后看一下启动模式是UEFI还是传统BIOS（Legacy），是否开启了CSM，现在新电脑一般默认开启的是UEFI模式引导，太老的电脑里根本没有UEFI的选项，那就是传统BIOS。&lt;/p&gt;
+&lt;p&gt;UEFI启动对应的硬盘分区表类型为GPT（GUID）。&lt;/p&gt;
+&lt;p&gt;UEFI+Legacy就是兼容模式，对应的硬盘分区表类型可以是GPT也可以是MBR。&lt;/p&gt;
+&lt;p&gt;开启CSM就是开启兼容模式，可以是GPT也可以是MBR。开启兼容模式需要关闭安全启动（Secure Boot）。&lt;/p&gt;
+&lt;p&gt;老电脑里根本找不到UEFI的选项，那就是传统BIOS（Legacy）对应MBR。&lt;/p&gt;
+&lt;p&gt;不同品牌主板BIOS里这几个选项的位置都不一样，总之要找到这几个关键字母就行了。&lt;/p&gt;
+&lt;p&gt;例如微星的主板是按Del进入BIOS&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702207957746.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702207975605.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如何选择：&lt;/p&gt;
+&lt;p&gt;如果装系统的整个硬盘小于等于2T可以任意选择，如果大于2T需要选择UEFI+GPT的方式，因为MBR分区表最多只能支持2T多一点。&lt;/p&gt;
+&lt;p&gt;如果装Win10系统选哪个方式都可以。&lt;/p&gt;
+&lt;p&gt;如果装Win7系统建议选择兼容模式+MBR的方式。用UEFI+GPT也可以，但是太麻烦了。&lt;/p&gt;
+&lt;p&gt;目前绝大多数主板UEFI启动只支持64位的系统。&lt;/p&gt;
+&lt;p&gt;2、把PE系统启动U盘插在电脑上，台式机一般插在机箱后面的插口，可以减少出错的几率。进入U盘里的PE系统有两种方法，一种方法是进BIOS设置U盘为第一启动项，一般是USB HDD或USB HARD DISK，设置好按F10保存之后重启自动进入U盘里的PE系统。第二种方法是开机时不停的按选择启动盘的热键，这个快捷键也是不同品牌的电脑或主板都不一样，需要根据自己电脑或主板的品牌搜索一下（例如XX主板U盘启动热键）。&lt;/p&gt;
+&lt;p&gt;例如微星主板是开机按F11进入选择启动盘的界面，下图第一个是硬盘启动，第二个和第三个都是UEFI模式启动的金士顿的U盘，不同品牌的U盘显示的不一样，实测第二个不能启动，第一个可以顺利进入PE。一般PE工具制作的启动U盘里都至少有两个以上的PE版本，如果不是太老的电脑就选Win10PE就可以了，防止不能识别一些硬件。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702208008741.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;3、进入PE之后就要给硬盘分区了，一般PE系统里都有一个 DiskGenius 硬盘分区工具，打开此工具首先检查一下硬盘分区格式是MBR还是GPT，如果电脑是传统BIOS启动则对应MBR，如果是UEFI启动则对应GPT，下图是在虚拟机里演示的，默认是MBR。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702208044941.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如果电脑是UEFI启动的就要改一下，右键左边硬盘那里，选择“转换分区类型为GUID格式”。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702208072643.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后选择“快速分区”，根据硬盘大小和需要来分就可以了，如果是固态硬盘一定要4K对齐，勾选“对齐分区到此扇区数的整数倍”，默认的就可以。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702208103275.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;GPT（GUID）分区一定要创建ESP分区，大小默认即可，ESP分区是用来放系统引导文件的，MSR分区虽然目前没什么用，但是还是一起创建比较好，安装完系统之后这两个分区都是隐藏的。保留空闲扇区那里可选也可以不选。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702208130396.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;硬盘分区完成之后就可以正式装系统了。&lt;/p&gt;
+&lt;p&gt;总结：传统BIOS（Legacy）对应的是MBR，系统引导文件和系统在一个分区。&lt;/p&gt;
+&lt;p&gt;UEFI对应的是GPT（GUID），系统引导文件在ESP分区。&lt;/p&gt;
+&lt;p&gt;开启CMS兼容模式都可以。&lt;/p&gt;
+">用U盘PE系统给硬盘分区的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/u-pan-pe/"" data-c="
+          &lt;p&gt;把PE系统装进U盘可以有很多实用的功能，U盘既可以当做存储文件的工具使用，又可以开机进入U盘里的PE系统维护电脑使用，PE系统启动U盘最常用的功能就是用来装系统，可以装原版也可以装各种ghost版本。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;Windows PE系统是一种系统预装环境和工具。现在主要有2003pe、win7pe、win8pe、win10pe，一般一个制作工具里都会集成两个或两个以上，以适应不用硬件的需求，PE其实就是一个精简版的Windows系统，只保留了最基本的功能并添加了一些实用的工具，例如可以给系统备份，在忘记Windows登录密码时可以进入PE系统清除Windows密码，给硬盘分区，系统坏了没法进入系统时可以进入PE里把放在桌面的重要文件导出来，还能够检测硬件信息等等。&lt;/p&gt;
+&lt;p&gt;好多人不喜欢用U盘PE来装系统，是因为有些U盘PE制作工具会偷偷的给电脑安装一些并不需要的软件，更改甚至锁定IE主页等行为，这里推荐两个比较好的制作工具，微PE工具箱和IT天空的优启通，微PE是目前大家公认的最干净的制作工具，没捆绑，不改主页。优启通虽然有推广软件和更改主页，但可以关掉，即使不小心更改了主页也不锁定，之后可以自己按需要更改，而且官网论坛很活跃，有问题可以去论坛交流。&lt;/p&gt;
+&lt;p&gt;首先要准备一个8G以上的U盘，一般还要放几个系统，越大越好。制作前U盘里不要放重要的文件，制作时U盘会被格式化。&lt;/p&gt;
+&lt;p&gt;微PE的下载和使用：百度搜索“微pe工具箱”，找到下图这个，一定要注意网址对不对，现在有好多假冒的。&lt;/p&gt;
+&lt;p&gt;微PE工具箱的网址是：http://www.wepe.com.cn&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702197409683.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;进到网站里面下载最新的版本即可，如果当前用的电脑是32位的系统就下载32位的，64位的就下载64位的，下载后可以直接打开（不需要安装），选择“安装PE到U盘选项”。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702197424698.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安装方法一般默认即可。&lt;/p&gt;
+&lt;p&gt;待写入U盘显示的是已经插在电脑上的U盘，如果电脑插了两个以上的U盘，可以选择需要制作的那个，如果什么显示都没有，就点一下右边那个刷新按钮。&lt;/p&gt;
+&lt;p&gt;格式化可以选择exFAT或NTFS，这两种文件格式都支持4G以上的大文件存储。&lt;/p&gt;
+&lt;p&gt;卷标随意，这个即使制作好之后也可以随意改。&lt;/p&gt;
+&lt;p&gt;壁纸可以自己设定，如果不改就会显示默认壁纸。&lt;/p&gt;
+&lt;p&gt;下面的（仅legacy启动可用）说的是只有传统BIOS启动方式才可以用，新的uefi启动不能用，现在大多数新电脑默认都是uefi启动，如果不需要DOS工具箱还是不勾选的好。&lt;/p&gt;
+&lt;p&gt;所有选好之后点击“立即安装进U盘”，等待制作完成即可。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702197437275.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;关于优启通可以直接百度搜索“IT天空”，找到IT天空官网，到里面下载最新版本。&lt;/p&gt;
+&lt;p&gt;IT天空网址：https://www.itsk.com&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702197450449.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;下载好之后也不用安装，可以直接打开，首先选择“U盘模式”，选择磁盘那里选择需要制作的U盘，其它都默认即可，壁纸也可以自己设定。之后点击“全新制作”就开始制作了。&lt;/p&gt;
+&lt;p&gt;还原空间的作用是，制作好之后又不想用了，可以把U盘还原成原来的样子。&lt;/p&gt;
+&lt;p&gt;免格升级的作用是，当优启通有新版本了，用这个选项可以直接升级，U盘不会被格式化，不影响里面存储的文件。&lt;br&gt;
+&lt;img src=&#34;https://blog.yunyou.vip/post-images/1702197461171.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;制作好之后就可以在电脑BIOS里设置成U盘为第一启动项，或开机按选择启动盘的快捷键，选择U盘，这样开机就能进入到U盘里的PE系统了。不同品牌主板的快捷键都不一样，需要根据自己电脑或主板的品牌搜一下。&lt;/p&gt;
+">制作PE系统启动U盘的方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/lian-xi-su-cai/"" data-c="
+          &lt;p&gt;二维练习素材第一部分：&lt;br&gt;
+&lt;a href=&#34;/post/2d1-1-10/&#34; target=&#34;_blank&#34;&gt;1-10&lt;/a&gt;     &lt;a href=&#34;/post/2d1-11-20/&#34; target=&#34;_blank&#34;&gt;11-20&lt;/a&gt;     &lt;a href=&#34;/post/2d1-21-30/&#34; target=&#34;_blank&#34;&gt;21-30&lt;/a&gt;     &lt;a href=&#34;/post/2d1-31-40/&#34; target=&#34;_blank&#34;&gt;31-40&lt;/a&gt;     &lt;a href=&#34;/post/2d1-41-50/&#34; target=&#34;_blank&#34;&gt;41-50&lt;/a&gt;     &lt;a href=&#34;/post/2d1-51-53/&#34; target=&#34;_blank&#34;&gt;51-53&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;二维练习素材第二部分：&lt;br&gt;
+&lt;a href=&#34;/post/2d2-1-10/&#34; target=&#34;_blank&#34;&gt;1-10&lt;/a&gt;     &lt;a href=&#34;/post/2d2-11-20/&#34; target=&#34;_blank&#34;&gt;11-20&lt;/a&gt;     &lt;a href=&#34;/post/2d2-21-30/&#34; target=&#34;_blank&#34;&gt;21-30&lt;/a&gt;     &lt;a href=&#34;/post/2d2-31-40/&#34; target=&#34;_blank&#34;&gt;31-40&lt;/a&gt;     &lt;a href=&#34;/post/2d2-41-50/&#34; target=&#34;_blank&#34;&gt;41-50&lt;/a&gt;     &lt;a href=&#34;/post/2d2-51-60/&#34; target=&#34;_blank&#34;&gt;51-60&lt;/a&gt;     &lt;a href=&#34;/post/2d2-61-70/&#34; target=&#34;_blank&#34;&gt;61-70&lt;/a&gt;     &lt;a href=&#34;/post/2d2-71-80/&#34; target=&#34;_blank&#34;&gt;71-80&lt;/a&gt;     &lt;a href=&#34;/post/2d2-81-90/&#34; target=&#34;_blank&#34;&gt;81-90&lt;/a&gt;     &lt;a href=&#34;/post/2d2-91-100/&#34; target=&#34;_blank&#34;&gt;91-100&lt;/a&gt;     &lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;二维练习素材第三部分：&lt;br&gt;
+&lt;a href=&#34;/post/2d3-1-10/&#34; target=&#34;_blank&#34;&gt;1-10&lt;/a&gt;     &lt;a href=&#34;/post/2d3-11-20/&#34; target=&#34;_blank&#34;&gt;11-20&lt;/a&gt;     &lt;a href=&#34;/post/2d3-21-30/&#34; target=&#34;_blank&#34;&gt;21-30&lt;/a&gt;     &lt;a href=&#34;/post/2d3-31-40/&#34; target=&#34;_blank&#34;&gt;31-40&lt;/a&gt;     &lt;a href=&#34;/post/2d3-41-50/&#34; target=&#34;_blank&#34;&gt;41-50&lt;/a&gt;     &lt;a href=&#34;/post/2d3-51-60/&#34; target=&#34;_blank&#34;&gt;51-60&lt;/a&gt;     &lt;a href=&#34;/post/2d3-61-70/&#34; target=&#34;_blank&#34;&gt;61-70&lt;/a&gt;     &lt;a href=&#34;/post/2d3-71-80/&#34; target=&#34;_blank&#34;&gt;71-80&lt;/a&gt;     &lt;a href=&#34;/post/2d3-81-90/&#34; target=&#34;_blank&#34;&gt;81-90&lt;/a&gt;     &lt;a href=&#34;/post/2d3-91-100/&#34; target=&#34;_blank&#34;&gt;91-100&lt;/a&gt;     &lt;/p&gt;
+">练习素材总目录</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/fen-xiang/"" data-c="
+          &lt;p&gt;A、永硕E盘：&lt;a href=&#34;http://wabc.ysepan.com&#34; target=&#34;_blank&#34;&gt;http://wabc.ysepan.com&lt;/a&gt;&lt;br&gt;
+B、123云盘：&lt;a href=&#34;https://www.123pan.com/s/dEp9-AJAI.html&#34; target=&#34;_blank&#34;&gt;https://www.123pan.com/s/dEp9-AJAI.html&lt;/a&gt;&lt;br&gt;
+C、百度网盘：&lt;a href=&#34;https://pan.baidu.com/s/1ItvohCyPCw8YGzDuRRry_w&#34; target=&#34;_blank&#34;&gt;https://pan.baidu.com/s/1ItvohCyPCw8YGzDuRRry_w&lt;/a&gt;   提取码: 6789&lt;/p&gt;
+&lt;p&gt;1、关闭系统自动更新工具：&lt;a href=&#34;https://wabc.lanzouj.com/b01fsqjrc&#34; target=&#34;_blank&#34;&gt;https://wabc.lanzouj.com/b01fsqjrc&lt;/a&gt;     密码:6789&lt;br&gt;
+2、PS存储为ico格式插件：&lt;a href=&#34;https://wabc.lanzouj.com/b01e7pzdg&#34; target=&#34;_blank&#34;&gt;https://wabc.lanzouj.com/b01e7pzdg&lt;/a&gt;     密码:6789&lt;br&gt;
+3、Mastercam2023：&lt;a href=&#34;https://pan.baidu.com/s/1ki8ju_Adn4s0bOl7TlcqXQ &#34; target=&#34;_blank&#34;&gt;https://pan.baidu.com/s/1ki8ju_Adn4s0bOl7TlcqXQ &lt;/a&gt;     提取码:6789&lt;/p&gt;
+">资源分享</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.yunyou.vip/post/about/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;p&gt;本站主要发布或分享一些电脑应用和数控编程加工方面的文章和资源，推荐一些比较实用的电脑软件、系统设置、系统优化的方法，还分享一些自己封装的电脑系统，数控加工方法和各种编程加工软件的使用方法等。&lt;/p&gt;
+&lt;p&gt;本站分享的所有资源仅供学习、研究使用，不得用于任何商业或非法用途，由于部分内容收集自互联网，若对您的权益造成损害请及时联系本站删除。&lt;/p&gt;
+&lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
+&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
+&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+&lt;p&gt;abckxk@163.com&lt;/p&gt;
+">关于</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+
+<input hidden id="copy" />
+<script>
+  !function () {
+    let times = document.querySelectorAll('.publish-time');
+    for (let i = 0; i < times.length; i++) {
+      let date = times[i].dataset.t;
+      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+      if (time < 60) {
+        str = time + '秒之前';
+      } else if (time < 3600) {
+        str = Math.floor(time / 60) + '分钟之前';
+      } else if (time >= 3600 && time < 86400) {
+        str = Math.floor(time / 3600) + '小时之前';
+      } else if (time >= 86400 && time < 259200) {
+        str = Math.floor(time / 86400) + '天之前';
+      } else {
+        str = times[i].textContent;
+      }
+      times[i].textContent = str;
+    }
+  }();
+</script>
+
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="/media/js/motion.js"></script>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 200
+    });
+  </script>
+
+
+
+
+
+
+
+</html>
