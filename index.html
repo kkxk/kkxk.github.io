@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="系统安装,系统优化,数控编程,加工中心编程,Mastercam,UG,CAD练习素材,电脑软件,手机软件">
+<meta name="description" content="">
+<meta name="theme-color" content="#495057">
+<title>云游笔记</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1740918099024">
+<link rel="stylesheet" href="/media/css/pisces.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.loli.net/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/default.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="/styles/main.css">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="/media/js/jquery.js"></script>
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="pisces">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>云游笔记</span>
+            </a>  
+          
+        </div>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+            <li class="nav-item nav-item-active">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-globe"></i> 首页
+                </a>
+              
+            </li>
+          
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout pisces ">
+      <div class="section-layout-wrapper">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">悠闲蛙</p>
+    
+    <div class="site-description right-motion">
+      
+      
+      
+        <p>电脑应用与数控编程技术分享</p>
+      
+      
+    </div>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://kkxk.github.io/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  
+
+  
+
+
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'pisces';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+        <div class="section-box pisces">
+          <section class="section bg-color posts-expand slide-down-in">
+            
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://kkxk.github.io/post/ben-zhan-wen-zhang-yi-zhuan-yi/"> 本站文章已转移 </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2025-01-20 21:19:12">2025-01-20</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span
+        >1<span class="language" data-lan="minute"
+          >分钟</span
+        ></span
+      >
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span
+        >7<span class="pc-show language" data-lan="words"
+          >字数</span
+        ></span
+      >
+    </span>
+    
+  </div>
+</section>
+
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+            
+              <p><p>欢迎访问<br>
+<a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a></p>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://kkxk.github.io/post/ben-zhan-wen-zhang-yi-zhuan-yi/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+  
+            
+            
+<div class="page bg-color">
+  <ul class="pagination-ul">
+    
+    
+      
+        <li class="pagination-li pagination-active">
+            <a href="/page/../">
+              1
+            </a>
+        </li>
+      
+    
+    
+  </ul>
+</div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <center id="runTimeBox">
+      已运行:<span id="run_time"></span>
+    </center>
+    <span id="busuanzi_container_site_pv">浏览数:<span id="busuanzi_value_site_pv"></span> 次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">访客数:<span id="busuanzi_value_site_uv"></span> 人</span>
+
+    <script>
+      BirthDay = new Date('2023-12-06');
+      if (BirthDay.getTime()) {
+        function runTime() {
+          str = "";
+          today = new Date();
+          timeold = today.getTime() - BirthDay.getTime();
+          msPerDay = 24 * 60 * 60 * 1000;
+          e_daysold = timeold / msPerDay;
+          daysold = Math.floor(e_daysold);
+          str += daysold + "天";
+          return str;
+        }
+        setInterval(function () {
+          $("#run_time").html(runTime());
+        }, 1000);
+      } else {
+        document.querySelector('.footer').removeChild(document.querySelector('#runTimeBox'));
+      }
+    </script>
+    <div class="poweredby">
+      
+    </div>
+  </footer>
+  
+    
+        <div class="pisces back-to-top" id="back_to_top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span class="scrollpercent"> <span id="back_to_top_text">0</span>% </span>
+            
+        </div>
+        
+                  
+                        
+</div>
+<script>
+  let sideBarOpen = "sidebar-open";
+  let body = document.body;
+  let back2Top = document.querySelector("#back_to_top"),
+    back2TopText = document.querySelector("#back_to_top_text"),
+    drawerBox = document.querySelector("#drawer_box"),
+    rightSideBar = document.querySelector(".sidebar"),
+    viewport = document.querySelector("body");
+
+  function scrollAnimation(currentY, targetY) {
+    let needScrollTop = targetY - currentY;
+    let _currentY = currentY;
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10);
+      _currentY += dist;
+      window.scrollTo(_currentY, currentY);
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY);
+      } else {
+        window.scrollTo(_currentY, targetY);
+      }
+    }, 1);
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener("scroll", function (e) {
+    let percent =
+      (document.scrollingElement.scrollTop /
+        (document.scrollingElement.scrollHeight -
+          document.scrollingElement.clientHeight)) *
+      100;
+    if (percent > 1 && !back2Top.classList.contains("back-top-active")) {
+      back2Top.classList.add("back-top-active");
+    }
+    if (percent == 0) {
+      back2Top.classList.remove("back-top-active");
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  let hasCacu = false;
+  window.addEventListener("resize", function (e) {
+    calcuHeight();
+  });
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (
+      (!hasCacu && back2Top.classList.contains("pisces")) ||
+      back2Top.classList.contains("gemini")
+    ) {
+      let sideBar = document.querySelector(".sidebar");
+      let navUl = document.querySelector("#site_nav");
+      sideBar.style =
+        "margin-top:" + (navUl.offsetHeight + navUl.offsetTop + 15) + "px;";
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false,
+    MOTION_TIME = 300,
+    RIGHT_MOVE_DIS = "320px";
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll(".right-motion");
+    let right = drawerBox.classList.contains("right");
+
+    let transitionDir = right
+      ? "transition.slideRightIn"
+      : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingRight: "0px",
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingLeft: "0px",
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      jQuery.Velocity(rightSideBar, "stop");
+      jQuery.Velocity(viewport, "stop");
+      jQuery.Velocity(rightMotions, "stop");
+      if (open) {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: RIGHT_MOVE_DIS,
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, transitionDir, {});
+            },
+          }
+        );
+        jQuery.Velocity(viewport, openProp, {
+          duration: MOTION_TIME,
+        });
+      } else {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: "0px",
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, {
+                opacity: 0,
+              });
+            },
+          }
+        );
+        jQuery.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME,
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle("muse-line");
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    };
+  }
+
+  // 链接跳转
+  let newWindow = "false";
+  if (newWindow === "true") {
+    let links = document.querySelectorAll(".post-body a");
+    links.forEach((item) => {
+      if (!item.classList.contains("btn")) {
+        item.setAttribute("target", "_blank");
+      }
+    });
+  }
+
+  let faSearch = document.querySelector("#fa_search");
+  faSearch &&
+    faSearch.addEventListener("click", function () {
+      document.querySelector("#search_mask").style = "";
+    });
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+  // 离开当前页title变化
+  var leaveTitle = "";
+  var normal_title = document.title;
+  if (leaveTitle) {
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState == "hidden") {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+</script>
+
+<link rel="stylesheet" href="/media/css/jquery.fancybox.css" />
+<script src="/media/js/jquery.fancybox.js"></script>
+
+<script>
+  let images = document.querySelectorAll(".section img");
+  images.forEach((image) => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement("a");
+    aelem.href = image.src;
+    aelem.dataset["fancybox"] = "images";
+    aelem.dataset["rel"] = "fancybox-button";
+    aelem.classList.add("fancybox");
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  });
+</script>
+  </div>
+</body>
+
+  <div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://kkxk.github.io/post/ben-zhan-wen-zhang-yi-zhuan-yi/"" data-c="
+          &lt;p&gt;欢迎访问&lt;br&gt;
+&lt;a href=&#34;https://www.dddy.cn/&#34; target=&#34;_blank&#34;&gt;www.dddy.cn&lt;/a&gt;&lt;/p&gt;
+">本站文章已转移</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+
+<input hidden id="copy" />
+<script>
+  !function () {
+    let times = document.querySelectorAll('.publish-time');
+    for (let i = 0; i < times.length; i++) {
+      let date = times[i].dataset.t;
+      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+      if (time < 60) {
+        str = time + '秒之前';
+      } else if (time < 3600) {
+        str = Math.floor(time / 60) + '分钟之前';
+      } else if (time >= 3600 && time < 86400) {
+        str = Math.floor(time / 3600) + '小时之前';
+      } else if (time >= 86400 && time < 259200) {
+        str = Math.floor(time / 86400) + '天之前';
+      } else {
+        str = times[i].textContent;
+      }
+      times[i].textContent = str;
+    }
+  }();
+</script>
+
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="/media/js/motion.js"></script>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 200
+    });
+  </script>
+
+
+
+
+
+
+
+</html>
