@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>顺铣和逆铣的区分方法以及刀具半径补偿代码G40、G41、G42的使用方法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="顺铣和逆铣只有在铣侧壁的时候才能明显的区分出来，其他情况比如铣平面的时候顺铣和逆铣一般是同时存在的。
+
+如下图所示，假设刀具位置不动，工件相对于刀具左右运动，区分顺铣和逆铣主要看刀具与工件的接触位置，刀具的切削方向和工件的运动方向一致为顺铣..." />
+    <meta name="keywords" content="数控编程,数控基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">顺铣和逆铣的区分方法以及刀具半径补偿代码G40、G41、G42的使用方法</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>顺铣和逆铣只有在铣侧壁的时候才能明显的区分出来，其他情况比如铣平面的时候顺铣和逆铣一般是同时存在的。</p>
+<!-- more -->
+<p>如下图所示，假设刀具位置不动，工件相对于刀具左右运动，区分顺铣和逆铣主要看刀具与工件的接触位置，刀具的切削方向和工件的运动方向一致为顺铣，相反就是逆铣。<br>
+<img src="https://blog.dddy.cn/post-images/1702812000199.jpg" alt="" loading="lazy"></p>
+<p>逆铣一般适用于吃刀量比较大的粗加工，顺铣一般适用于吃刀量比较小的精加工，顺铣加工的表面粗糙度要明显好于逆铣，顺铣用于粗加工一般要配合高转速，吃刀量和进给速度要根据实际情况确定。</p>
+<p>刀具半径补偿G40、G41、G42代码的用法</p>
+<p>G40：取消刀具半径补偿指令</p>
+<p>G41：刀具半径左补偿指令，顺铣的时候用。</p>
+<p>G42：刀具半径右补偿指令，逆铣的时候用。</p>
+<p>使用G41、G42一种情况是在编程时不考虑刀具半径，按图纸尺寸编程即可，在刀补的相应位置输入刀具半径，另一种情况是在刀具磨损时直接在刀补的相应位置输入相应的磨损数值，不用在程序里去改数值。</p>
+<p>指令格式：G01（或G00）X_ Y_D_ F_;</p>
+<p>D为刀具号，如D01、D02等，数值在机床中刀补、偏置中输入。</p>
+<p>如下图所示：<br>
+<img src="https://blog.dddy.cn/post-images/1702812043675.jpg" alt="" loading="lazy"></p>
+<p>G41：铣外形方向为顺时针，铣内腔方向为逆时针，如上图A、B所示，刀具在工件左边，为顺铣。</p>
+<p>G42：铣外形方向为逆时针，铣内腔方向为顺时针，如上图C、D所示，刀具在工件右边，为逆铣。</p>
+<p>G41、G42只能在G00、G01后面或同行使用，不能放在G02、G03后面，也就是必须要走一段直线，使用后要加G40取消补偿，个人觉得在手工编程时不是很方便，手工编程一般都是很简单的图形，还不如在编程时考虑刀具半径和直接在程序里改数值更直观一些。软件编程时会根据相应的选项自动添加G41或G42，当刀具磨损时直接在机床里相应的刀具补偿项里输入相应的数值即可，需要注意的是无论是手工编程还是软件编程在加工开始进刀的时候一定要有一段直线。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong/" class="tag">
+                    数控编程
+                  </a>
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong-ji-chu/" class="tag">
+                    数控基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/g90-g91/">
+                  <h3 class="post-title">
+                    数控铣床、加工中心代码G90和G91的区别和用法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

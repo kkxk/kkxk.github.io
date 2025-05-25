@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>加工中心螺纹加工代码G74、G84的用法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="G74：左旋攻螺纹，不常用。
+G84：右旋攻螺纹，常用。
+
+格式为：G98（G99）G74（G84）X_ Y_ Z_ R _ F_;
+如图所示：
+
+G74是由参考高度R反转切至孔底B（由Z值决定），再正转退回到R。
+G84是由参考高度R正转..." />
+    <meta name="keywords" content="数控编程,数控基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">加工中心螺纹加工代码G74、G84的用法</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>G74：左旋攻螺纹，不常用。</p>
+<p>G84：右旋攻螺纹，常用。</p>
+<!-- more -->
+<p>格式为：G98（G99）G74（G84）X_ Y_ Z_ R _ F_;</p>
+<p>如图所示：<br>
+<img src="https://blog.dddy.cn/post-images/1702812607352.jpg" alt="" loading="lazy"></p>
+<p>G74是由参考高度R反转切至孔底B（由Z值决定），再正转退回到R。</p>
+<p>G84是由参考高度R正转切至孔底B（由Z值决定），再反转退回到R。</p>
+<p>发那科系统中进给F值等于转速乘以螺距，比如转速S为每分钟100转，螺距为1.5，那F值就是每分钟100*1.5=150</p>
+<p>上面的代码在实际应用中只适合攻丝很少的一段距离，丝锥退回之后就不能再重复继续加深了，并且要使用带弹性的攻丝专用刀柄。如果需要用丝锥加工很深的螺纹就需要开启刚性攻丝，前面加上代码M29 S***，并且加上Q值，刚性攻丝不能使用弹性攻丝刀柄，用丝锥加工深一点的螺纹总是有断丝锥的可能，最好还是用螺纹铣刀铣比较好。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong/" class="tag">
+                    数控编程
+                  </a>
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong-ji-chu/" class="tag">
+                    数控基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/g73-g81-g82-g83-g98-g99-g80/">
+                  <h3 class="post-title">
+                    加工中心孔加工代码G73、G81、G82、G83及辅助代码G98、G99、G80的使用方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

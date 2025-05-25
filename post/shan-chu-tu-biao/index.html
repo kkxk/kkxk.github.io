@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Win10系统删除此电脑中多余图标的方法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="在win10系统中打开此电脑后发现有很多文件图标是不需要的，尤其是一些网盘应用会在C盘前面加一个图标，有的能够用鼠标右键删除，有的需要在软件设置更改一下就行了，而有的既不能右键删除也不能在设置里改成不显示，这就需要手动强制删除了。
+
+第一步..." />
+    <meta name="keywords" content="系统优化,电脑应用" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Win10系统删除此电脑中多余图标的方法</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>在win10系统中打开此电脑后发现有很多文件图标是不需要的，尤其是一些网盘应用会在C盘前面加一个图标，有的能够用鼠标右键删除，有的需要在软件设置更改一下就行了，而有的既不能右键删除也不能在设置里改成不显示，这就需要手动强制删除了。</p>
+<!-- more -->
+<p>第一步：按键盘Win+R键，或在开始菜单里找到“运行”，打开运行窗口，输入regedit，打开注册表编辑器。<br>
+<img src="https://blog.dddy.cn/post-images/1702810631134.png" alt="" loading="lazy"></p>
+<p>第二步：找到下面这两个值。</p>
+<p>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace</p>
+<p>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace</p>
+<p>这两个只有前面第一项不一样，后面都一样。</p>
+<p>第三步：鼠标右键删除不需要的。</p>
+<p>例如0DB7E03F-FC29-4DC6-9020-FF41B59E513A对应值“3D对象”<br>
+<img src="https://blog.dddy.cn/post-images/1702810653453.png" alt="" loading="lazy"></p>
+<p>其他的是</p>
+<p>视频：f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a</p>
+<p>图片：24ad3ad4-a569-4530-98e1-ab02f9417aa8</p>
+<p>文档：d3162b92-9365-467a-956b-92703aca08af</p>
+<p>下载：088e3905-0323-4b02-9826-5d99428e115f</p>
+<p>音乐：3dfdf296-dbec-4fb4-81d1-6a3438bcf4de</p>
+<p>桌面：B4BFCC3A-DB2C-424C-B029-7FE99A87C641</p>
+<p>下图这样的如果是安装的网盘等软件的图标，点一下相应的值右面就会显示应用的名称，如果是不需要的右键直接删除就行了<br>
+<img src="https://blog.dddy.cn/post-images/1702810676419.png" alt="" loading="lazy"></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/xi-tong-you-hua/" class="tag">
+                    系统优化
+                  </a>
+                
+                  <a href="https://blog.dddy.cn/tag/dian-nao/" class="tag">
+                    电脑应用
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/jin-zhi-xi-tong-geng-xin/">
+                  <h3 class="post-title">
+                    禁止Win10系统自动更新系统补丁的方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

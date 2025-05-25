@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>数控铣床、加工中心刀具长度补偿代码G43、G44、G49 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="G43：刀具向上补偿。
+G44：刀具向下补偿。
+G49：取消刀具长度补偿。
+
+一般一个加工程序中习惯只用G43或只用G44，不然容易弄混。
+刀具长度补偿就是不同刀具与基准面（基准高度0，可以是某一把刀对到工件表面或某个位置的数值，也可以是根..." />
+    <meta name="keywords" content="数控编程,数控基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">数控铣床、加工中心刀具长度补偿代码G43、G44、G49</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>G43：刀具向上补偿。</p>
+<p>G44：刀具向下补偿。</p>
+<p>G49：取消刀具长度补偿。</p>
+<!-- more -->
+<p>一般一个加工程序中习惯只用G43或只用G44，不然容易弄混。</p>
+<p>刀具长度补偿就是不同刀具与基准面（基准高度0，可以是某一把刀对到工件表面或某个位置的数值，也可以是根据需要设定的一个数值）的长度差。</p>
+<p>如下图：<br>
+<img src="https://blog.dddy.cn/post-images/1702812245167.jpg" alt="" loading="lazy"></p>
+<p>假设基准高度为机床坐标Z-100（这时候是Z-100设置为0），第一把刀的机床坐标为-50，第二把刀的机床坐标为-150。</p>
+<p>如果程序中用G43，H1的补偿值为50，H2的补偿值为-50。</p>
+<p>如果程序中用G44，H1的补偿值为-50，H2的补偿值为50。</p>
+<p>在实际工作中一般大部分人都是用G43的，很少见到有人用G44 。</p>
+<p>如果把第一把刀的机床坐标-50设为基准高度0，用G43，H1里面就输入0，H2里面就输入-100。</p>
+<p>一般程序中，正常情况下是要用G49取消前面的G43的，但实际应用中比如G43 H2就已经取消了前面的G43 H1，可以根据实际情况决定是否省略G49。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong/" class="tag">
+                    数控编程
+                  </a>
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong-ji-chu/" class="tag">
+                    数控基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/shun-xi-ni-xi-g40-g41-g42/">
+                  <h3 class="post-title">
+                    顺铣和逆铣的区分方法以及刀具半径补偿代码G40、G41、G42的使用方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

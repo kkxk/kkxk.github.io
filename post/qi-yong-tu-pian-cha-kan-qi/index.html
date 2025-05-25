@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>启用Win10系统自带的图片查看器的方法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="有些版本的win10系统的图片查看器默认是关闭的，打开图片文件会默认用画图工具打开，非常的不方便，安装其他的看图软件又怕有各种弹窗广告，所以如果只是简单的查看一下图片还是用系统内置的图片查看器比较好。
+
+第一步：在开始菜单里找到“运行”，或..." />
+    <meta name="keywords" content="系统优化,电脑应用" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">启用Win10系统自带的图片查看器的方法</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>有些版本的win10系统的图片查看器默认是关闭的，打开图片文件会默认用画图工具打开，非常的不方便，安装其他的看图软件又怕有各种弹窗广告，所以如果只是简单的查看一下图片还是用系统内置的图片查看器比较好。</p>
+<!-- more -->
+<p>第一步：在开始菜单里找到“运行”，或按键盘上的win+R键，打开运行窗口。<br>
+<img src="https://blog.dddy.cn/post-images/1702811066179.jpg" alt="" loading="lazy"></p>
+<p>第二步：输入regedit 打开注册表编辑器。<br>
+<img src="https://blog.dddy.cn/post-images/1702811085475.jpg" alt="" loading="lazy"></p>
+<p>第三步：找到下面位置</p>
+<p>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations</p>
+<p>鼠标双击右侧窗口第二个或第三个任意一个即可<br>
+<img src="https://blog.dddy.cn/post-images/1702811102635.jpg" alt="" loading="lazy"></p>
+<p>第四步：先复制 PhotoViewer.FileAssoc.Tiff，一会再用。<br>
+<img src="https://blog.dddy.cn/post-images/1702811126345.jpg" alt="" loading="lazy"></p>
+<p>第五步：在空白的地方鼠标右键——新建——字符串值<br>
+<img src="https://blog.dddy.cn/post-images/1702811142435.jpg" alt="" loading="lazy"></p>
+<p>第六步：输入常用的图片格式，如.jpg .jpeg .png .bmp等，输入哪种格式就能打开哪种格式的图片。<br>
+<img src="https://blog.dddy.cn/post-images/1702811159892.jpg" alt="" loading="lazy"></p>
+<p>第七步：依次双击刚输入的，然后在数值里面粘贴刚才复制的内容。<br>
+<img src="https://blog.dddy.cn/post-images/1702811177972.jpg" alt="" loading="lazy"></p>
+<p>第八步：在开始菜单里找到设置，然后找到应用——默认应用——图片查看器选择Windows照片查看器。<br>
+<img src="https://blog.dddy.cn/post-images/1702811194427.jpg" alt="" loading="lazy"><br>
+<img src="https://blog.dddy.cn/post-images/1702811208668.jpg" alt="" loading="lazy"><br>
+<img src="https://blog.dddy.cn/post-images/1702811220260.jpg" alt="" loading="lazy"><br>
+<img src="https://blog.dddy.cn/post-images/1702811226108.jpg" alt="" loading="lazy"></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/xi-tong-you-hua/" class="tag">
+                    系统优化
+                  </a>
+                
+                  <a href="https://blog.dddy.cn/tag/dian-nao/" class="tag">
+                    电脑应用
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/qi-yong-guan-li-yuan-zhang-hu/">
+                  <h3 class="post-title">
+                    Windows系统启用管理员账户（Administrator）的方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

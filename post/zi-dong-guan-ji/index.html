@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>设置电脑每天到设定的时间就自动关机的方法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="有时候用完电脑忘记了关机，而显示器到了设置的时间就自动关闭了，可能主机会连续开好几天都没有发现，可以设置电脑每天到了一定的时间就自动关机。
+
+第一步：鼠标右键“此电脑”，选择“管理”
+
+第二步：选择“任务计划程序“，然后选择”创建基本任务“..." />
+    <meta name="keywords" content="电脑应用" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">设置电脑每天到设定的时间就自动关机的方法</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>有时候用完电脑忘记了关机，而显示器到了设置的时间就自动关闭了，可能主机会连续开好几天都没有发现，可以设置电脑每天到了一定的时间就自动关机。</p>
+<!-- more -->
+<p>第一步：鼠标右键“此电脑”，选择“管理”<br>
+<img src="https://blog.dddy.cn/post-images/1702814822404.jpg" alt="" loading="lazy"></p>
+<p>第二步：选择“任务计划程序“，然后选择”创建基本任务“。<br>
+<img src="https://blog.dddy.cn/post-images/1702814842464.jpg" alt="" loading="lazy"></p>
+<p>第三步：填写标题和描述，内容随意，自己能看懂就行。<br>
+<img src="https://blog.dddy.cn/post-images/1702814858985.jpg" alt="" loading="lazy"></p>
+<p>第四步：选择“每天”<br>
+<img src="https://blog.dddy.cn/post-images/1702814873481.jpg" alt="" loading="lazy"></p>
+<p>第五步：选择启动程序，程序或脚本的内容填写：shutdown</p>
+<p>添加参数：-s -t 60</p>
+<p>60的意思是提前60秒有弹窗警告，也可以改成其他的数值，要是有文件没有保存就要及时保存，60秒之后就会自动关机。</p>
+<p>然后下一步，完成就可以了。<br>
+<img src="https://blog.dddy.cn/post-images/1702814891152.jpg" alt="" loading="lazy"><br>
+<img src="https://blog.dddy.cn/post-images/1702814904708.jpg" alt="" loading="lazy"></p>
+<p>如果想取消每天自动关机，就点左边的“任务计划程序库“，找到自动关机（就是第三步设置的名称）的那个任务，然后鼠标右键-删除即可。<br>
+<img src="https://blog.dddy.cn/post-images/1702814922793.jpg" alt="" loading="lazy"></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/dian-nao/" class="tag">
+                    电脑应用
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/vericut-bu-xian-shi-ji-chuang/">
+                  <h3 class="post-title">
+                    VERICUT 9.2.2机床视图窗口不显示机床的解决办法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

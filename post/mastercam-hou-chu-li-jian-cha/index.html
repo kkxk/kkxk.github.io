@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Mastercam四轴五轴后处理需要检查或修改的地方 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="一、四轴用替换轴功能时
+1、查找 substitution
+找到 pxyzcout1 #Axis substitution
+****************
+******************
+*******************
+cs..." />
+    <meta name="keywords" content="mastercam,数控编程" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Mastercam四轴五轴后处理需要检查或修改的地方</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>一、四轴用替换轴功能时<br>
+1、查找 substitution<br>
+找到 pxyzcout1 #Axis substitution<br>
+****************<br>
+******************<br>
+*******************<br>
+csav = x<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∗</mo><mo>(</mo><mn>360</mn><mi mathvariant="normal">/</mi><mo>(</mo><mi>p</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">*(360/(pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∗</span><span class="mopen">(</span><span class="mord">3</span><span class="mord">6</span><span class="mord">0</span><span class="mord">/</span><span class="mopen">(</span><span class="mord mathdefault">p</span><span class="mord mathdefault">i</span></span></span></span><em>rotdia<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>)</mo><mo>)</mo><mi mathvariant="normal">改</mi><mi mathvariant="normal">为</mi><mi>c</mi><mi>s</mi><mi>a</mi><mi>v</mi><mo>=</mo><mo>−</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">))改为csav = -x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span><span class="mclose">)</span><span class="mord cjk_fallback">改</span><span class="mord cjk_fallback">为</span><span class="mord mathdefault">c</span><span class="mord mathdefault">s</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord mathdefault">x</span></span></span></span></em>(360/(pi<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∗</mo><mi>r</mi><mi>o</mi><mi>t</mi><mi>d</mi><mi>i</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">*rotdia</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">∗</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault">a</span></span></span></span>))</p>
+<p>就是在x前面加个负号</p>
+<p>2、后面的<br>
+if (rot_ccw_pos******<br>
+在if的前面加#号<br>
+即改为<br>
+# if (rot_ccw_pos******</p>
+<p>二、五轴后处理需要检查或修改的内容<br>
+1、定义机床结构</p>
+<p>0 Table/Table<br>
+1 Tilt Head/Table<br>
+2 Head/Head<br>
+3 Nutator Table/Table<br>
+4 Nutator Tilt Head/Table<br>
+5 Nutator Head/Head</p>
+<p>备注：Nutator是指非正交<br>
+查看或修改的位置在<br>
+mtype<br>
+实际机床是什么结构就改为相应数字</p>
+<p>2、定义旋转轴的名称</p>
+<p>查看或修改的位置在<br>
+#Assign axis address</p>
+<p>str_pri_axis 第一旋转轴（也可以理解为第五轴）<br>
+str_sec_axis 第二旋转轴（也可以理解为第四轴）<br>
+一般情况旋转角度范围大的是第一旋转轴，旋转角度范围小的是第二旋转轴</p>
+<p>3、设置旋转轴的行程</p>
+<p>查看或修改的位置在<br>
+#Set the absolute angles for axis travel on primary</p>
+<p>第一旋转轴（第五轴）<br>
+pri_limlo 最小<br>
+pri_limhi 最大</p>
+<p>第二旋转轴（第四轴）<br>
+sec_limlo 最小、<br>
+sec_limhi 最大</p>
+<p>备注：各有两个，都设置一样就行了<br>
+如果实际旋转角度是-120到+120，而实际加工过程中不想让它往后转，可以在这里限制，比如限制在-30到115</p>
+<p>4、旋转轴零度位置<br>
+如果后处理读取机床定义，可在机床定义里设置</p>
+<p>下面是常见机床结构零点位置</p>
+<p>机床结构 ： AC AB BC</p>
+<p>rotaxis1$： vecy vecz vecx</p>
+<p>rotdir1$ ： vecx vecx vecy</p>
+<p>rotaxis2$： vecz vecz vecz</p>
+<p>rotdir2$ : vecy vecy vecx</p>
+<p>5、旋转轴自动松开夹紧<br>
+功能开关由 use_clamp 控制，0表示关闭，1表示开启<br>
+代码位置<br>
+# Primary axis lock/unlock 第一旋转轴（第五轴）<br>
+spunlock 松开<br>
+splock 夹紧<br>
+# Secondary axis lock/unlock 第二旋转轴（第四轴）<br>
+ssunlock 松开<br>
+sslock 夹紧</p>
+<p>具体用什么代码根据机床系统确定</p>
+<p>6、检查实际机床两个旋转轴的旋转中心是否重合<br>
+如果不重合就需要在后处理中修改差值<br>
+saxisx<br>
+saxisy<br>
+AC轴，如果C轴比A轴差10，那就在saxisy后输入-10<br>
+BC轴在X方向有差值就修改saxisx</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/mastercam/" class="tag">
+                    mastercam
+                  </a>
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong/" class="tag">
+                    数控编程
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/ps-ico/">
+                  <h3 class="post-title">
+                    用Photoshop制作ico格式图片的方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

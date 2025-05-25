@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>自定义U盘图标的方法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="首先准备一个做为U盘图标的图片，图片格式为ico格式，可以上网搜索“ico在线制作”也可以用本站介绍的用PS制作ico图标的方法。
+
+把电脑设置成显示文件的扩展名，把ico格式的图片放在U盘根目录，再“新建”-“文本文档”， 里面写入代码：..." />
+    <meta name="keywords" content="电脑应用" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">自定义U盘图标的方法</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>首先准备一个做为U盘图标的图片，图片格式为ico格式，可以上网搜索“ico在线制作”也可以用本站介绍的用PS制作ico图标的方法。</p>
+<!-- more -->
+<p>把电脑设置成显示文件的扩展名，把ico格式的图片放在U盘根目录，再“新建”-“文本文档”， 里面写入代码：</p>
+<p>[autorun]</p>
+<p>Icon=tubiao.ico</p>
+<p>图片的名称要和文本里的名称一样。<br>
+<img src="https://blog.dddy.cn/post-images/1702816348084.jpg" alt="" loading="lazy"></p>
+<p>然后保存，重命名文件为 autorun.inf</p>
+<p>更改文件扩展名选择“是”。<br>
+<img src="https://blog.dddy.cn/post-images/1702816366014.jpg" alt="" loading="lazy"></p>
+<p>把这两个文件的属性设置为隐藏即可。正常弹出U盘，再插入U盘就可以看到U盘的图标已经变了。<br>
+<img src="https://blog.dddy.cn/post-images/1702816394368.jpg" alt="" loading="lazy"><br>
+<img src="https://blog.dddy.cn/post-images/1702816400993.jpg" alt="" loading="lazy"></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/dian-nao/" class="tag">
+                    电脑应用
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/mastercam-zi-ding-yi-she-zhi/">
+                  <h3 class="post-title">
+                    Mastercam自定义功能区和右键菜单的方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

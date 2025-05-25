@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>数控铣床、加工中心代码G02、G03的含义和用法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="G02：顺时针圆弧插补（就是刀具按顺时针方向走圆弧）
+G03：逆时针圆弧插补（就是刀具按逆时针方向走圆弧）
+
+可以是整圆也可以是一段圆弧，一般手工编程能用到整圆、半圆和四分之一圆。
+指令格式：
+G02（或G03）X_ Y_ Z_ I_ J_..." />
+    <meta name="keywords" content="数控编程,数控基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">数控铣床、加工中心代码G02、G03的含义和用法</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>G02：顺时针圆弧插补（就是刀具按顺时针方向走圆弧）</p>
+<p>G03：逆时针圆弧插补（就是刀具按逆时针方向走圆弧）</p>
+<!-- more -->
+<p>可以是整圆也可以是一段圆弧，一般手工编程能用到整圆、半圆和四分之一圆。</p>
+<p>指令格式：</p>
+<p>G02（或G03）X_ Y_ Z_ I_ J_K_（或R）F_;</p>
+<p>一般建议小于等于180度角时用R表示，R为圆弧半径，大于等于180度时用IJK表示，当然IJK是全能的，整圆必须用IJK表示（有些机床系统并不能识别K，一般用Z表示，也就是IJZ）。</p>
+<p>XYZ为圆弧终点坐标，IJK为圆心在XYZ轴上相对于圆弧起点的坐标，就是圆心（X0,Y0）相对于起点所移动的距离。</p>
+<p>如下图所示：A:X0 Y10 , B:X10 Y0 , C:X0 Y-10，D:X-10 Y0<br>
+<img src="https://blog.dddy.cn/post-images/1702811738833.jpg" alt="" loading="lazy"></p>
+<p>A-B: G02 X10 Y0 I0 J-10</p>
+<p>终点坐标是X10 Y0,圆心（X0 Y0）相对于起点（X0 Y10）X没有变，所以I是0。Y负了10，所以J是-10。</p>
+<p>B-A: G03 X0 Y10 I-10 J0</p>
+<p>终点坐标是X0 Y10,圆心（X0 Y0）相对于起点（X10 Y0）X负了10，所以I是-10。Y没有变，所以J是0。</p>
+<p>B-C: G02 X0 Y-10 I-10 J0    C-B: G03 X10 Y0 I0 J10</p>
+<p>C-D: G02 X-10 Y0 I0 J10     D-C: G03 X0 Y-10 I10 J0</p>
+<p>D-A: G02 X0 Y10 I10 J0      A-D: G03 X-10 Y0 I0 J-10</p>
+<p>当是整圆时A-A: G02（或G03） X0 Y10 I0 J-10</p>
+<p>当终点坐标与起点坐标重合时也可省略终点坐标：</p>
+<p>G02 I0 J-10 F100;</p>
+<p>建议小于等于180度时用R表示:</p>
+<p>A-B: G02 X10 Y0 R10</p>
+<p>A-C:G02 X0 Y-10 R10 （R值实际应用中要考虑刀具半径）</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong/" class="tag">
+                    数控编程
+                  </a>
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong-ji-chu/" class="tag">
+                    数控基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/g00-g01/">
+                  <h3 class="post-title">
+                    数控铣床、加工中心代码G00和G01的用法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

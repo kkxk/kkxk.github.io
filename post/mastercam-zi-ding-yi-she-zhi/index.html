@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Mastercam自定义功能区和右键菜单的方法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="1、在菜单栏或功能区任意空白位置点击鼠标右键，然后选择 自定义功能区。
+
+
+2、选择要添加自定义功能的位置，然后新建组。比如在 线框 里加一个自定义组。
+
+3、鼠标右键新群组，给新建的组重命名。
+
+4、在左侧找到需要的命令，然后点击添加，就..." />
+    <meta name="keywords" content="mastercam,数控编程" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Mastercam自定义功能区和右键菜单的方法</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>1、在菜单栏或功能区任意空白位置点击鼠标右键，然后选择 自定义功能区。</p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://blog.dddy.cn/post-images/1702815743266.jpg" alt="" loading="lazy"></figure>
+<p>2、选择要添加自定义功能的位置，然后新建组。比如在 线框 里加一个自定义组。<br>
+<img src="https://blog.dddy.cn/post-images/1702815760341.jpg" alt="" loading="lazy"></p>
+<p>3、鼠标右键新群组，给新建的组重命名。<br>
+<img src="https://blog.dddy.cn/post-images/1702815776995.jpg" alt="" loading="lazy"></p>
+<p>4、在左侧找到需要的命令，然后点击添加，就会添加的自定义的位置，完成之后点击确定即可。<br>
+<img src="https://blog.dddy.cn/post-images/1702815793145.jpg" alt="" loading="lazy"></p>
+<p>5、下图是自定义的结果。<br>
+<img src="https://blog.dddy.cn/post-images/1702815809884.jpg" alt="" loading="lazy"></p>
+<p>6、右键菜单的自定义也在功能区，上下文菜单就是鼠标右键菜单。<br>
+<img src="https://blog.dddy.cn/post-images/1702815827132.jpg" alt="" loading="lazy"></p>
+<p>7、在左侧选择需要添加的右键菜单的命令，然后点击添加即可，可以通过右侧的箭头移动位置。<br>
+<img src="https://blog.dddy.cn/post-images/1702815843731.jpg" alt="" loading="lazy"></p>
+<p>8、还可以移除右键菜单里面的命令，先选中右侧需要移除的选项，然后点击移除即可。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/mastercam/" class="tag">
+                    mastercam
+                  </a>
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong/" class="tag">
+                    数控编程
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/mastercam-hui-guang-gao-liang/">
+                  <h3 class="post-title">
+                    Mastercam去除辉光高亮显示的方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

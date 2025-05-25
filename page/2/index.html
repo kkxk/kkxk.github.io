@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="&lt;a href=&#34;https://www.dddy.cn/&#34; target=&#34;_blank&#34;&gt;www.dddy.cn&lt;/a&gt;">
+    
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://blog.dddy.cn/post/zi-cheng-xu-m98-m99/">
+                  <h2 class="post-title">加工中心子程序M98、M99的使用方法和实例</h2>
+                </a>
+                <div class="post-date">
+                  2023-12-17
+                </div>
+                <div class="post-abstract">
+                  <p>1、子程序的格式：</p>
+<p>O____;</p>
+<p>******;</p>
+<p>******;</p>
+<p>M99;</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://blog.dddy.cn/post/g85-g86-g88-g89-g76/">
+                  <h2 class="post-title">加工中心镗孔加工代码G85 G86 G88 G89 G76的用法</h2>
+                </a>
+                <div class="post-date">
+                  2023-12-17
+                </div>
+                <div class="post-abstract">
+                  <p>G85：格式为，G85 X_ Y_ Z_ R_ F_ ;</p>
+<p>主轴正转从R点以进给速度F至孔底然后以同样进给速度退回至R点。</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://blog.dddy.cn/post/g74-g84/">
+                  <h2 class="post-title">加工中心螺纹加工代码G74、G84的用法</h2>
+                </a>
+                <div class="post-date">
+                  2023-12-17
+                </div>
+                <div class="post-abstract">
+                  <p>G74：左旋攻螺纹，不常用。</p>
+<p>G84：右旋攻螺纹，常用。</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://blog.dddy.cn/post/g73-g81-g82-g83-g98-g99-g80/">
+                  <h2 class="post-title">加工中心孔加工代码G73、G81、G82、G83及辅助代码G98、G99、G80的使用方法</h2>
+                </a>
+                <div class="post-date">
+                  2023-12-17
+                </div>
+                <div class="post-abstract">
+                  <p>格式为：G98（或G99）G_ _ X_ Y_ Z_ R_ Q_ P_ F_;</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://blog.dddy.cn/post/g43-g44-g49/">
+                  <h2 class="post-title">数控铣床、加工中心刀具长度补偿代码G43、G44、G49</h2>
+                </a>
+                <div class="post-date">
+                  2023-12-17
+                </div>
+                <div class="post-abstract">
+                  <p>G43：刀具向上补偿。</p>
+<p>G44：刀具向下补偿。</p>
+<p>G49：取消刀具长度补偿。</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://blog.dddy.cn/post/shun-xi-ni-xi-g40-g41-g42/">
+                  <h2 class="post-title">顺铣和逆铣的区分方法以及刀具半径补偿代码G40、G41、G42的使用方法</h2>
+                </a>
+                <div class="post-date">
+                  2023-12-17
+                </div>
+                <div class="post-abstract">
+                  <p>顺铣和逆铣只有在铣侧壁的时候才能明显的区分出来，其他情况比如铣平面的时候顺铣和逆铣一般是同时存在的。</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://blog.dddy.cn/post/g90-g91/">
+                  <h2 class="post-title">数控铣床、加工中心代码G90和G91的区别和用法</h2>
+                </a>
+                <div class="post-date">
+                  2023-12-17
+                </div>
+                <div class="post-abstract">
+                  <p>G90：绝对坐标（就是以设定的工件零点为参考点）</p>
+<p>G91：增量坐标（就是以刀具当前所在的位置为参考点）</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://blog.dddy.cn/post/g02-g03/">
+                  <h2 class="post-title">数控铣床、加工中心代码G02、G03的含义和用法</h2>
+                </a>
+                <div class="post-date">
+                  2023-12-17
+                </div>
+                <div class="post-abstract">
+                  <p>G02：顺时针圆弧插补（就是刀具按顺时针方向走圆弧）</p>
+<p>G03：逆时针圆弧插补（就是刀具按逆时针方向走圆弧）</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://blog.dddy.cn/post/g00-g01/">
+                  <h2 class="post-title">数控铣床、加工中心代码G00和G01的用法</h2>
+                </a>
+                <div class="post-date">
+                  2023-12-17
+                </div>
+                <div class="post-abstract">
+                  <p>G00 的作用是使刀具从一点快速定位到另一点，每个轴分别运动，都以最快的速度移动到相应位置，移动的速度一般由机床中的参数设定。</p>
+<p>G01的作用是指定一个坐标轴按进给速度移动或多个坐标轴同时按进给速度联动，移动或联动的进给速度由程序中F值确定。</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://blog.dddy.cn/post/qi-yong-tu-pian-cha-kan-qi/">
+                  <h2 class="post-title">启用Win10系统自带的图片查看器的方法</h2>
+                </a>
+                <div class="post-date">
+                  2023-12-17
+                </div>
+                <div class="post-abstract">
+                  <p>有些版本的win10系统的图片查看器默认是关闭的，打开图片文件会默认用画图工具打开，非常的不方便，安装其他的看图软件又怕有各种弹窗广告，所以如果只是简单的查看一下图片还是用系统内置的图片查看器比较好。</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+
+          <div class="pagination-container">
+  
+    <a href="https://blog.dddy.cn/" class="prev"><i class="icon-arrow-ios-back-outline"></i> 上一页</a>
+  
+  
+    <a href="https://blog.dddy.cn/page/3/" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

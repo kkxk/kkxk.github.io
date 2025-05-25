@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>加工中心镗孔加工代码G85 G86 G88 G89 G76的用法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="G85：格式为，G85 X_ Y_ Z_ R_ F_ ;
+主轴正转从R点以进给速度F至孔底然后以同样进给速度退回至R点。
+
+G86：格式为，G86 X_ Y_ Z_ R_ F_ ;
+主轴正转从R点以进给速度F至孔底然后主轴停转，快速退回至R..." />
+    <meta name="keywords" content="数控编程,数控基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">加工中心镗孔加工代码G85 G86 G88 G89 G76的用法</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>G85：格式为，G85 X_ Y_ Z_ R_ F_ ;</p>
+<p>主轴正转从R点以进给速度F至孔底然后以同样进给速度退回至R点。</p>
+<!-- more -->
+<p>G86：格式为，G86 X_ Y_ Z_ R_ F_ ;</p>
+<p>主轴正转从R点以进给速度F至孔底然后主轴停转，快速退回至R点，会在孔壁留下刀痕。</p>
+<p>G88: 格式为，G88 X_Y_Z_R_P_F_;</p>
+<p>与G86类似，但在孔底时停顿一定时间，然后停止转动，程序暂停，用手动模式将刀具从孔中退出，一般不用。</p>
+<p>G89：格式为，G89 X_Y_Z_R_P_F_;</p>
+<p>与G85类似，但在孔底有暂停。</p>
+<p>G76: 格式为，G76 X_Y_Z_R_P_Q_F_;</p>
+<p>精镗循环指令，镗至孔底时有三个动作：①进给暂停（P）, ②主轴定向停止（需要机床性能的支持），③刀具沿刀尖反方向移动（Q），最后刀具退出，可以避免刀尖划伤精镗表面。<br>
+<img src="https://blog.dddy.cn/post-images/1702812825737.jpg" alt="" loading="lazy"></p>
+<p>G76是最好用的精镗孔代码，但在使用前一定要确定好主轴定向停转时刀尖的方向和移动的方向，移动的距离不能太多，一般只要刀尖离开孔壁一点就可以，防止方向错误损伤刀柄和机床。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong/" class="tag">
+                    数控编程
+                  </a>
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong-ji-chu/" class="tag">
+                    数控基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/g74-g84/">
+                  <h3 class="post-title">
+                    加工中心螺纹加工代码G74、G84的用法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

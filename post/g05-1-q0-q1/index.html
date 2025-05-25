@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>高速高精代码G05.1 Q0和G05.1 Q1的应用 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="有些发那科系统的老加工中心如果不开启高速高精走起来是一顿一顿的，很不流畅，尤其是进行三维加工的时候，会浪费很多时间，可以尝试手工添加高速高精代码G05.1 Q0和G05.1 Q1试一试。
+
+G05.1 Q0 的意思是关，放到换刀之前合适的位..." />
+    <meta name="keywords" content="数控编程" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">高速高精代码G05.1 Q0和G05.1 Q1的应用</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>有些发那科系统的老加工中心如果不开启高速高精走起来是一顿一顿的，很不流畅，尤其是进行三维加工的时候，会浪费很多时间，可以尝试手工添加高速高精代码G05.1 Q0和G05.1 Q1试一试。</p>
+<!-- more -->
+<p>G05.1 Q0 的意思是关，放到换刀之前合适的位置，意思就是换刀之前必须关闭高速高精。</p>
+<p>G05.1 Q1 的意思是开，放到换刀之后程序开始加工之前。</p>
+<p>如果换刀之后出现报警，可以在换刀之前加G49取消刀具长度补偿试一下。</p>
+<p>钻孔程序不可开启高速高精。</p>
+<p>下面是经过测试的一段代码，可以参考一下。</p>
+<p>O0000(GSGJCS)<br>
+N100 G21<br>
+N101 G05.1 Q0<br>
+N102 G0 G17 G40 G49 G80 G90<br>
+N104 T1 M6<br>
+N105 G05.1 Q1<br>
+N106 G0 G90 G54 X10. Y25. S1000 M3<br>
+N108 G43 H1 Z60.<br>
+N110 Z2.<br>
+N112 G1 Z0. F200.<br>
+N114 Y35. F400.<br>
+N116 G3 X0. Y45. I-10. J0.<br>
+N118 G1 X-40.<br>
+N120 G3 X-45. Y40. I0. J-5.<br>
+N122 G1 Y-40.<br>
+N124 G3 X-40. Y-45. I5. J0.<br>
+N126 G1 X40.<br>
+N128 G3 X45. Y-40. I0. J5.<br>
+N130 G1 Y40.<br>
+N132 G3 X40. Y45. I-5. J0.<br>
+N134 G1 X0.<br>
+N136 G3 X-10. Y35. I0. J-10.<br>
+N138 G1 Y25.<br>
+N140 G0 Z60.<br>
+N142 G05.1 Q0<br>
+N144 G90 G00 Z100. M09<br>
+N146 X-260. Y150. M05<br>
+N147 G49<br>
+N148 T2 M6<br>
+N149 G05.1 Q1<br>
+N150 G0 G90 G17 G54 X12. Y-80. S833 M3<br>
+N152 G43 H2 Z60.<br>
+N154 Z2.<br>
+N156 G1 Z0. F600.<br>
+N158 Y-68. F100.<br>
+N160 G3 X0. Y-56. I-12. J0.<br>
+N162 G1 X-40.<br>
+N164 G2 X-56. Y-40. I0. J16.<br>
+N166 G1 Y40.<br>
+N168 G2 X-40. Y56. I16. J0.<br>
+N170 G1 X40.<br>
+N172 G2 X56. Y40. I0. J-16.<br>
+N174 G1 Y-40.<br>
+N176 G2 X40. Y-56. I-16. J0.<br>
+N178 G1 X0.<br>
+N180 G3 X-12. Y-68. I0. J-12.<br>
+N182 G1 Y-80.<br>
+N184 G0 Z100.<br>
+N186 M5<br>
+N187 G05.1 Q0<br>
+N188 X-260. Y150.<br>
+N192 M30</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong/" class="tag">
+                    数控编程
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/u-pan-tu-biao/">
+                  <h3 class="post-title">
+                    自定义U盘图标的方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

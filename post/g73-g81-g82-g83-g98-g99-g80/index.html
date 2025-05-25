@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>加工中心孔加工代码G73、G81、G82、G83及辅助代码G98、G99、G80的使用方法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="格式为：G98（或G99）G_ _ X_ Y_ Z_ R_ Q_ P_ F_;
+
+如下图所示：
+
+G98的作用是一个孔加工完之后刀具返回安全高度，再换下一个孔，就是最靠近打孔循环程序那一行上面的Z的值。
+G99的作用是一个孔加工完之后刀具返..." />
+    <meta name="keywords" content="数控编程,数控基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">加工中心孔加工代码G73、G81、G82、G83及辅助代码G98、G99、G80的使用方法</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>格式为：G98（或G99）G_ _ X_ Y_ Z_ R_ Q_ P_ F_;</p>
+<!-- more -->
+<p>如下图所示：<br>
+<img src="https://blog.dddy.cn/post-images/1702812370839.jpg" alt="" loading="lazy"></p>
+<p>G98的作用是一个孔加工完之后刀具返回安全高度，再换下一个孔，就是最靠近打孔循环程序那一行上面的Z的值。</p>
+<p>G99的作用是一个孔加工完之后刀具返回参考高度R，再换下一个孔。</p>
+<p>X、Y是需要加工的孔的位置。</p>
+<p>Z值是指需要加工的孔的深度，为负数。</p>
+<p>R为参考高度，就是开始以进给F的速度向下运行的位置。</p>
+<p>Q值只在G73、G83中起作用，每次抬刀之后向下切削的深度。</p>
+<p>P值只在G82中起作用，是指刀具在孔底暂停的时间，单位是毫秒（ms）。（1秒=1000毫秒）</p>
+<p>F值为进给速度，单位是mm/min，每分钟进给多少毫秒。</p>
+<p>G73：高速深孔加工。</p>
+<p>例如：G98 G73 X0 Y0 Z-50 R3 Q5 F100;</p>
+<p>在X0 Y0的位置加工深度为50的孔，每向下切削Q5之后抬刀到d（d值由机床系统设定），有利于断屑排屑，但在实际应用中有些材质用这种抬刀方式并不能很好的排屑，虽然加工速度快但也要根据实际情况决定是否使用。</p>
+<p>G81：一般用于不太深的孔。</p>
+<p>例如：G98 G81 X0 Y0 Z-10 R3 F100;</p>
+<p>从参考高度（R3）开始，切削到-10后直接快速提刀，中途不抬刀。</p>
+<p>G82：一般用于对孔底要求光滑的加工，一般用于倒角。</p>
+<p>例如：G98 G82 X0 Y0 Z-5 R3 P1000 F100;</p>
+<p>与P值配合，钻到孔底（Z-5）停顿1000毫秒，使孔底光滑。</p>
+<p>G83：适用于深孔加工。</p>
+<p>例如：G98 G83 X0 Y0 Z-50 R3 Q5 F100;</p>
+<p>与G73不同的是每次切削Q5之后抬刀到达参考高度R3。更有利于排屑。</p>
+<p>G80：结束孔加工循环。在所有孔加工完成之后的程序段中要加入G80，结束循环，如果不加G80可能在下一个XY坐标中还继续打孔的动作。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong/" class="tag">
+                    数控编程
+                  </a>
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong-ji-chu/" class="tag">
+                    数控基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/g43-g44-g49/">
+                  <h3 class="post-title">
+                    数控铣床、加工中心刀具长度补偿代码G43、G44、G49
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

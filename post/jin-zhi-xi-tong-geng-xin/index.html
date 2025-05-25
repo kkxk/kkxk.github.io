@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>禁止Win10系统自动更新系统补丁的方法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="正常来说系统补丁当然是越全越好，但是实际使用的过程中发现win10补丁更新后经常产生一些特殊的问题，例如更新导致了某些软件不能正常使用、打印机不能使用等一些问题。
+
+方法一：通过修改组策略禁止自动更新。
+在开始菜单中找到“运行”窗口，或按“..." />
+    <meta name="keywords" content="系统优化,电脑应用" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">禁止Win10系统自动更新系统补丁的方法</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>正常来说系统补丁当然是越全越好，但是实际使用的过程中发现win10补丁更新后经常产生一些特殊的问题，例如更新导致了某些软件不能正常使用、打印机不能使用等一些问题。</p>
+<!-- more -->
+<p>方法一：通过修改组策略禁止自动更新。</p>
+<p>在开始菜单中找到“运行”窗口，或按“Win+R”快捷键，输入“gpedit.msc”，打开本地组策略。<br>
+<img src="https://blog.dddy.cn/post-images/1702810186741.jpg" alt="" loading="lazy"></p>
+<p>依次找到(计算机配置—管理模板—Windows组件—Windows更新，双击“配置自动更新”)<br>
+<img src="https://blog.dddy.cn/post-images/1702810212369.jpg" alt="" loading="lazy"></p>
+<p>然后选择“已禁用”，再点击应用或确定，重启电脑后就可以了。<br>
+<img src="https://blog.dddy.cn/post-images/1702810234608.jpg" alt="" loading="lazy"></p>
+<p>方法二：通过工具直接更改设置。</p>
+<p>在这个网站里（https://www.sordum.org/）有一个工具叫做Windows Update Blocker，可以关闭更新也可以开启更新，非常实用。<br>
+<img src="https://blog.dddy.cn/post-images/1702810260051.jpg" alt="" loading="lazy"></p>
+<p>可以到官网下载最新版。</p>
+<p>虽然禁止了自动更新，但仍然可以手动更新，点击“检查更新”就会安装更新补丁。<br>
+<img src="https://blog.dddy.cn/post-images/1702810383676.jpg" alt="" loading="lazy"></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/xi-tong-you-hua/" class="tag">
+                    系统优化
+                  </a>
+                
+                  <a href="https://blog.dddy.cn/tag/dian-nao/" class="tag">
+                    电脑应用
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/jin-zhi-zi-dong-geng-xin-qu-dong/">
+                  <h3 class="post-title">
+                    禁止Win10系统自动更新硬件驱动的方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Windows系统电源选项里的优化设置 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="此项主要更改一下硬盘自动关闭时间、USB设置和系统散热方式设置，Win7、Win10基本差不多，下面是以Win10为例，首先打开控制面板里的“电源选项”，点击左侧的“选择关闭显示器的时间”。
+
+
+然后再点击“更改高级电源设置”，这里的“关闭..." />
+    <meta name="keywords" content="系统优化,电脑应用" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Windows系统电源选项里的优化设置</h2>
+            <div class="post-date">2023-12-16</div>
+            
+            <div class="post-content" v-pre>
+              <p>此项主要更改一下硬盘自动关闭时间、USB设置和系统散热方式设置，Win7、Win10基本差不多，下面是以Win10为例，首先打开控制面板里的“电源选项”，点击左侧的“选择关闭显示器的时间”。</p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://blog.dddy.cn/post-images/1702727473705.jpg" alt="" loading="lazy"></figure>
+<p>然后再点击“更改高级电源设置”，这里的“关闭显示器”和“使计算机进入睡眠状态”的时间可以根据需要设置。<br>
+<img src="https://blog.dddy.cn/post-images/1702727495697.jpg" alt="" loading="lazy"></p>
+<p>“在此时间后关闭硬盘”一般设置为0，表示从不关闭，如果需要电脑在某个时间后自动休眠可以在上一步睡眠选项那里设置。<br>
+<img src="https://blog.dddy.cn/post-images/1702727513920.jpg" alt="" loading="lazy"></p>
+<p>禁用USB选择性暂停，防止USB设备出现短暂的无法使用的状态。</p>
+<p>散热方式改成“被动”，CPU散热风扇就会自动调节转速，就是CPU温度低时风扇转速低，CPU温度升高后，风扇自动提高转速。</p>
+<p>都设置完成后点击“应用”就可以了。<br>
+<img src="https://blog.dddy.cn/post-images/1702727535655.jpg" alt="" loading="lazy"></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/xi-tong-you-hua/" class="tag">
+                    系统优化
+                  </a>
+                
+                  <a href="https://blog.dddy.cn/tag/dian-nao/" class="tag">
+                    电脑应用
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/jia-kuai-guan-ji/">
+                  <h3 class="post-title">
+                    加快电脑关机速度的方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

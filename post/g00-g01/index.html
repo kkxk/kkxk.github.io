@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>数控铣床、加工中心代码G00和G01的用法 | 点点的雨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.dddy.cn/favicon.ico?v=1748177963995">
+<link rel="stylesheet" href="https://blog.dddy.cn/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="G00 的作用是使刀具从一点快速定位到另一点，每个轴分别运动，都以最快的速度移动到相应位置，移动的速度一般由机床中的参数设定。
+G01的作用是指定一个坐标轴按进给速度移动或多个坐标轴同时按进给速度联动，移动或联动的进给速度由程序中F值确定。..." />
+    <meta name="keywords" content="数控编程,数控基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.dddy.cn">
+        <img src="https://blog.dddy.cn/images/avatar.png?v=1748177963995" class="site-logo">
+        <h1 class="site-title">点点的雨</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            内容归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签分类
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <a href="https://www.dddy.cn/" target="_blank">www.dddy.cn</a>
+    </div>
+    <div class="site-footer">
+      Email：abckxk@163.com | <a class="rss" href="https://blog.dddy.cn/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">数控铣床、加工中心代码G00和G01的用法</h2>
+            <div class="post-date">2023-12-17</div>
+            
+            <div class="post-content" v-pre>
+              <p>G00 的作用是使刀具从一点快速定位到另一点，每个轴分别运动，都以最快的速度移动到相应位置，移动的速度一般由机床中的参数设定。</p>
+<p>G01的作用是指定一个坐标轴按进给速度移动或多个坐标轴同时按进给速度联动，移动或联动的进给速度由程序中F值确定。</p>
+<!-- more -->
+<p>如下图所示：<br>
+<img src="https://blog.dddy.cn/post-images/1702811579926.jpg" alt="" loading="lazy"></p>
+<p>假设需要将刀具从A点移动到B点</p>
+<p>首先需要将刀具位置移动到A点，G90 G00 X20 Y20;</p>
+<p>G00的用法是：G00 X50 Y30; 此时X轴Y轴分别运动（一般机床设定的XY轴快速移动的速度都是相同的），也就是Y已经到30停止了，而X也刚到30，还差20，X轴需要继续移动20才会停止。X沿着蓝色虚线移动了30，Y沿着蓝色虚线移动了10，是相互独立分别进行的。</p>
+<p>G01的用法是：G01 X50 Y30 F100; 此时刀具从A点沿着绿色的虚线移动到B点，X轴Y轴联动，两个轴同时开始移动也同时停止，移动速度是每分钟100毫米。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong/" class="tag">
+                    数控编程
+                  </a>
+                
+                  <a href="https://blog.dddy.cn/tag/shu-kong-ji-chu/" class="tag">
+                    数控基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.dddy.cn/post/qi-yong-tu-pian-cha-kan-qi/">
+                  <h3 class="post-title">
+                    启用Win10系统自带的图片查看器的方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
