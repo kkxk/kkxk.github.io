@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://kkxk.github.io</id>
+    <title>点点的雨</title>
+    <updated>2025-08-07T12:53:03.826Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://kkxk.github.io"/>
+    <link rel="self" href="https://kkxk.github.io/atom.xml"/>
+    <subtitle>&lt;a href=&quot;https://www.dddy.cn/&quot; target=&quot;_blank&quot;&gt;www.dddy.cn&lt;/a&gt;</subtitle>
+    <logo>https://kkxk.github.io/images/avatar.png</logo>
+    <icon>https://kkxk.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2025, 点点的雨</rights>
+    <entry>
+        <title type="html"><![CDATA[欢迎光临]]></title>
+        <id>https://kkxk.github.io/post/huan-ying-guang-lin/</id>
+        <link href="https://kkxk.github.io/post/huan-ying-guang-lin/">
+        </link>
+        <updated>2025-08-07T12:00:31.000Z</updated>
+    </entry>
+</feed>
